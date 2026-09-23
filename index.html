@@ -212,7 +212,11 @@
   @media (max-width: 760px) {
     body { font-size: 1.0625rem; }
     .work-grid { grid-template-columns: 1fr; }
-    .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .facts-band .wrap { padding-inline: 0; }
+    .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); border-left: 0; }
+    .facts li { padding-inline: var(--gutter); }
+    .facts li:nth-child(2n) { border-right: 0; }
+    .facts li.date { border-right: 0; }
     .facts li.date { grid-column: span 2; }
     .close .wrap { flex-direction: column; align-items: flex-start; }
     .instructors ul { grid-template-columns: 1fr; }
