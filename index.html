@@ -181,8 +181,13 @@
   .close p { margin: 0; font-weight: 900; font-stretch: 62%; font-size: clamp(2.2rem, 6vw, 4rem); line-height: .95; color: var(--green); }
 
   footer { background: var(--green-deep); color: var(--mist); }
-  footer .wrap { padding-block: 1.75rem; font-size: 1rem; }
+  footer .wrap { padding-block: clamp(36px, 5vw, 56px) 1.75rem; font-size: 1rem; }
   footer a { color: var(--paper); text-underline-offset: 3px; }
+  .instructors h2 { margin: 0 0 1rem; font-weight: 700; font-stretch: 100%; font-size: 1rem; line-height: 1.3; color: var(--paper); }
+  .instructors ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem clamp(24px, 4vw, 48px); }
+  .instructors li { font-size: .95rem; line-height: 1.4; }
+  .instructors b { display: block; font-weight: 700; color: var(--paper); }
+  .sponsor { margin: clamp(32px, 5vw, 48px) 0 0; padding-top: 1.25rem; border-top: 1px solid rgba(207, 224, 217, .25); }
 
   /* Motion: only when JS runs and the reader allows it; content is visible by default */
   @media (prefers-reduced-motion: no-preference) {
@@ -210,6 +215,7 @@
     .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .facts li.date { grid-column: span 2; }
     .close .wrap { flex-direction: column; align-items: flex-start; }
+    .instructors ul { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -280,7 +286,15 @@
 
 <footer>
   <div class="wrap">
-    <a href="https://ai.msu.edu/ai-ready">An AI-Ready Spartans project, Michigan State University</a>
+    <section class="instructors" aria-labelledby="instructors-title">
+      <h2 id="instructors-title">Instructors</h2>
+      <ul>
+        <li><b>Junlin Yuan</b>Mechanical Engineering</li>
+        <li><b>Tianyi Kou-Herrema</b>Digital Humanities @ MSU, College of Arts &amp; Letters</li>
+        <li><b>Jonathan Barber</b>Digital Scholarship Lab, MSU Libraries</li>
+      </ul>
+    </section>
+    <p class="sponsor"><a href="https://ai.msu.edu/ai-ready">An AI-Ready Spartans project, Michigan State University</a></p>
   </div>
 </footer>
 
