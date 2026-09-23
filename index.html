@@ -8,7 +8,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://agentic-spartans.github.io/">
 <meta property="og:title" content="Spartan Agentic AI Studio">
-<meta property="og:description" content="Direct a team of AI agents, not just chat with one. A free, self-paced online course for MSU students in any major. Starts Nov 1, 2026.">
+<meta property="og:description" content="Direct a team of AI agents. A free, self-paced online course for MSU students in any major. Starts Nov 1, 2026.">
 <meta name="theme-color" content="#18453B">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%2318453B'/%3E%3Crect x='3' y='3' width='10' height='3' fill='%23fff'/%3E%3Crect x='3' y='8' width='2' height='5' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,18 +66,10 @@
     text-wrap: balance;
   }
   h1 .line { display: block; }
-  .subline {
-    margin: 1.5rem 0 0;
-    font-weight: 300;
-    font-stretch: 125%;
-    font-size: clamp(1.35rem, 3.6vw, 2.6rem);
-    line-height: 1.1;
-    color: var(--mist);
-  }
   .lede {
-    margin: 2.25rem 0 0;
-    max-width: 38rem;
-    font-size: clamp(1.125rem, 1.6vw, 1.3rem);
+    margin: clamp(1.75rem, 3vw, 2.75rem) 0 0;
+    max-width: 40rem;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
     line-height: 1.5;
   }
   .hero-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.75rem; }
@@ -193,9 +185,8 @@
 
   /* Motion: only when JS runs and the reader allows it; content is visible by default */
   @media (prefers-reduced-motion: no-preference) {
-    .js h1 .line, .js .subline { animation: rise .9s cubic-bezier(.2, .7, .1, 1) both; }
+    .js h1 .line { animation: rise .9s cubic-bezier(.2, .7, .1, 1) both; }
     .js h1 .line:nth-child(2) { animation-delay: .08s; }
-    .js .subline { animation-delay: .22s; }
     @keyframes rise { from { opacity: 0; transform: translateY(.35em); } }
 
     .js .team.pending .director,
@@ -233,7 +224,6 @@
     <p class="name">Spartan Agentic AI Studio</p>
     <div class="headline">
       <h1><span class="line">Direct a team</span> <span class="line">of AI agents.</span></h1>
-      <p class="subline">Not just chat with one.</p>
       <p class="lede">A free, self-paced online course for MSU students in any major: build a small team of AI agents, check its work, and point it at a problem from your own field.</p>
     </div>
     <div class="hero-foot">
