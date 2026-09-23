@@ -187,6 +187,8 @@
   .instructors ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem clamp(24px, 4vw, 48px); }
   .instructors li { font-size: .95rem; line-height: 1.4; }
   .instructors b { display: block; font-weight: 700; color: var(--paper); }
+  .instructors b a { text-decoration-thickness: 1px; text-decoration-color: rgba(255, 255, 255, .45); }
+  .instructors b a:hover { text-decoration-color: currentColor; }
   .sponsor { margin: clamp(32px, 5vw, 48px) 0 0; padding-top: 1.25rem; border-top: 1px solid rgba(207, 224, 217, .25); }
 
   /* Motion: only when JS runs and the reader allows it; content is visible by default */
@@ -293,9 +295,9 @@
     <section class="instructors" aria-labelledby="instructors-title">
       <h2 id="instructors-title">Instructors</h2>
       <ul>
-        <li><b>Junlin Yuan</b>Mechanical Engineering</li>
-        <li><b>Tianyi Kou-Herrema</b>Digital Humanities @ MSU, College of Arts &amp; Letters</li>
-        <li><b>Jonathan Barber</b>Digital Scholarship Lab, MSU Libraries</li>
+        <li><b><a href="https://engineering.msu.edu/directory/faculty/junlin">Junlin Yuan</a></b>Mechanical Engineering, College of Engineering</li>
+        <li><b><a href="https://directory.cal.msu.edu/koutiany/">Tianyi Kou-Herrema</a></b>Digital Humanities @ MSU, College of Arts &amp; Letters</li>
+        <li><b><a href="https://lib.msu.edu/staff/barber85">Jonathan Barber</a></b>Digital Scholarship Lab, MSU Libraries</li>
       </ul>
     </section>
     <p class="sponsor"><a href="https://ai.msu.edu/ai-ready">An AI-Ready Spartans project, Michigan State University</a></p>
