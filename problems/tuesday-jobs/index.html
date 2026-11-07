@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pick a future by its Tuesday | Spartan Agentic AI Studio</title>
+<meta name="description" content="A job title makes you think about how respected the job is and who does it. What you actually live with is an ordinary working day, such as a Tuesday. This agent team lets you pick a job by diaries of its Tuesdays, built from moments such as finishing on time, before you see any job title.">
+<meta name="theme-color" content="#18453B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%2318453B'/%3E%3Crect x='3' y='3' width='10' height='3' fill='%23fff'/%3E%3Crect x='3' y='8' width='2' height='5' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <p class="crumbs"><a href="../../">Spartan Agentic AI Studio</a><span>/</span><a href="../">Problems</a></p>
+    <div class="hero-grid">
+      <div>
+        <h1>Pick a future by its Tuesday</h1>
+        <p class="meta">Contributed by Spartan Agentic AI Studio, Michigan State University.</p>
+        <div class="actions"><a class="button" href="team.zip" download="tuesday-jobs-team.zip">Download the team (ZIP)</a></div>
+      </div>
+      <img class="cartoon" src="cartoon.png" width="1536" height="1024" alt="An open diary on a desk seen from above, with a garden trowel, a wrench, a stick of chalk and a cup of coffee around it.">
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="brief wrap">
+<p class="course-note">Words with a dotted underline, like <span class="course-term">agent team</span>, are explained in the course.</p>
+<section>
+<h2>The problem</h2>
+<p>A job title makes you think about how respected the job is and who does it. What you actually live with is an ordinary working day, such as a Tuesday. This <span class="course-term">agent team</span> lets you pick a job by diaries of its Tuesdays, built from moments such as finishing on time, before you see any job title.</p>
+<figure><img src="sketch.png" width="1350" height="900" alt="The eight boxes are the steps below, in order. The orange box is the verifier&#x27;s check."><figcaption>The eight boxes are the steps below, in order. The orange box is the verifier&#x27;s check.</figcaption></figure>
+<ul>
+<li>Step 1: The <span class="course-term">planner</span>, an AI helper, writes the <span class="course-term">plan</span>: the steps for this run and the checks its result must pass. It lists 10 rather different moments: small parts of a workday that some jobs have and others do not, such as working outdoors. It also picks 50 very different jobs so that each moment fits some of them. Each job gets a secret label, such as C36, so its name stays hidden from you.</li>
+<li>Step 2: You read the <span class="course-term">plan</span> and approve it, or ask for changes. Then you look at the moments, not the jobs, and rate how much you like each one from 1 to 5. A 1 means you would rather not have it, and a 5 means you like it a lot.</li>
+<li>Step 3: Many diary writers, also AI helpers, work at once, one per job. Each invents a diary of an ordinary Tuesday in that job, about 150 words, never using a word of the job's name.</li>
+<li>Step 4: Many moment scorers work at once, one per diary, and never see the job names. They find how relevant each of your 10 moments is in the diary, from 0 if it never happens to 5 if it clearly happens. This mark is about the diary, not about how much you like the moment. For each mark they copy the line from the diary that shows it.</li>
+<li>Step 5: The <span class="course-term">verifier</span> checks the work of the diary writers and moment scorers against the three points under "What a good answer looks like". Work that fails goes back to be redone before you see any diary.</li>
+<li>Step 6: The team ranks the diaries by how well their moments match your ratings, as "How the diaries are ranked" explains. You read the top few, such as the best five, shown only by their labels, and pick the Tuesday you like best.</li>
+<li>Step 7: Only now does the <span class="course-term">orchestrator</span>, the AI helper you talk to, tell you the job behind your diary. That is the job whose Tuesday you liked best, chosen before you knew what it was.</li>
+<li>Step 8: The <span class="course-term">report writer</span> writes your report as a Word file: the task, the checks, the results and how the team worked. You add your own judgment before you hand it in.</li>
+</ul>
+</section>
+<section>
+<h2>What we want to find out</h2>
+<ul>
+<li>What matters most to you in an ordinary workday?</li>
+<li>Which diary would you pick if you could not see the job title?</li>
+<li>What job is behind the diary you picked?</li>
+</ul>
+</section>
+<section>
+<h2>What the agent team does</h2>
+<figure><img src="team.png" width="1536" height="1024" alt="The work moves from the planner to the diary writers, the moment scorers and the verifier. You approve the plan, rate the moments and pick a diary; a failed check goes back to the orchestrator."><figcaption>The work moves from the planner to the diary writers, the moment scorers and the verifier. You approve the plan, rate the moments and pick a diary; a failed check goes back to the orchestrator.</figcaption></figure>
+<p>The <span class="course-term">orchestrator</span> is the <span class="course-term">agent</span> you talk to, and it gives every other <span class="course-term">agent</span> one task. To start, open the downloaded folder in OpenCode and type /do followed by "Read the Tuesday task."</p>
+</section>
+<section>
+<h2>How the diaries are ranked</h2>
+<ul>
+<li>The team picks the rule and shows it with the best diaries.</li>
+<li>In our run, each moment gave a diary 6 points when its mark matched your rating, and 1 point less for each step apart. With 10 moments, the most a diary could get was 60.</li>
+<li>Pay, required schooling and the place of the job are not part of it. Only the moments you rate count, including finishing on time.</li>
+</ul>
+</section>
+<section>
+<h2>What a good answer looks like</h2>
+<ul>
+<li>No job name reaches you or the moment scorers before you pick.</li>
+<li>Every scored moment comes with a line copied word for word from its diary.</li>
+<li>Most moments show up in the diaries.</li>
+</ul>
+</section>
+<section>
+<h2>What the team found</h2>
+<p>In our test, we ran the team once with 10 moments and 50 jobs.</p>
+<ul>
+<li>The best diary got 55 out of 60 points, and eight diaries got 53 or more. The team showed all eight by label.</li>
+<li>Our tester picked the best diary, without seeing any job names.</li>
+<li>That diary belonged to an environmental consultant. One moment was seeing a finished result by the end of the day, and our tester rated it 5. The scorers marked this diary 5 for it and quoted "left a little after five, with the main record complete."</li>
+<li>No diary named its own job, and every mark had a line copied word for word from its diary.</li>
+<li>Our run skipped two steps: it showed no <span class="course-term">plan</span> for approval, and no report was written.</li>
+<li>In our run the <span class="course-term">orchestrator</span>, not the <span class="course-term">planner</span>, picked the 50 jobs.</li>
+<li>The first scorers saw our tester's ratings. The team marked all 50 diaries again without them, and these results use the second marks.</li>
+<li>The diary writers were told the kinds of moments to show, so the diaries may show them more often than real days would.</li>
+<li>The <span class="course-term">verifier</span> first failed the check that no job name leaks, because diaries used words for people's roles. It passed when asked to look only for job titles.</li>
+</ul>
+</section>
+  </div>
+  <section class="get on-paper" aria-label="Download">
+    <div class="wrap">
+      <p><b>Try it yourself.</b> The download holds the problem, the list of what a good answer must show and the <span class="course-term">agent team</span>. Unzip it, open the folder in <span class="course-term">OpenCode</span>, and type <span class="course-term">/do</span> to start a run.</p>
+      <a class="button" href="team.zip" download="tuesday-jobs-team.zip">Download the team (ZIP)</a>
+    </div>
+  </section>
+  <aside class="run-details" aria-labelledby="run-details"><div class="wrap">
+<h2 id="run-details">Run details</h2>
+<dl><dt>Run time</dt><dd>about 20 minutes per run</dd><dt>Run cost</dt><dd>about $0.24 per run</dd><dt><span class="course-term">Model</span></dt><dd>GPT-6 Luna, high reasoning effort</dd></dl>
+<p>Measured times and costs come from our test runs; each run varies.</p>
+</div></aside>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="sponsor"><a href="https://ai.msu.edu/ai-ready">An AI-Ready Spartans project, Michigan State University</a></p>
+  </div>
+</footer>
+</body>
+</html>

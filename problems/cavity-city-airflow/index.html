@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wind in a city street | Spartan Agentic AI Studio</title>
+<meta name="description" content="City planners want to know how air moves in a street between two tall buildings, because the air carries fumes and heat. We picture the street as a square of air, 20 meters on each side, with the wind sliding over its top. The agent team writes a program that computes how fast the air moves everywhere in that square.">
+<meta name="theme-color" content="#18453B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%2318453B'/%3E%3Crect x='3' y='3' width='10' height='3' fill='%23fff'/%3E%3Crect x='3' y='8' width='2' height='5' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <p class="crumbs"><a href="../../">Spartan Agentic AI Studio</a><span>/</span><a href="../">Problems</a></p>
+    <div class="hero-grid">
+      <div>
+        <h1>Wind in a city street</h1>
+        <p class="meta">Contributed by Spartan Agentic AI Studio, Michigan State University.</p>
+        <div class="actions"><a class="button" href="team.zip" download="cavity-city-airflow-team.zip">Download the team (ZIP)</a></div>
+      </div>
+      <img class="cartoon" src="cartoon.png" width="1536" height="1024" alt="Two city buildings seen from the side, with wind blowing over their roofs and a large swirl of air turning between them in the street below.">
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="brief wrap">
+<p class="course-note">Words with a dotted underline, like <span class="course-term">agent team</span>, are explained in the course.</p>
+<section>
+<h2>The problem</h2>
+<p>City planners want to know how air moves in a street between two tall buildings, because the air carries fumes and heat. We picture the street as a square of air, 20 meters on each side, with the wind sliding over its top. The <span class="course-term">agent team</span> writes a program that computes how fast the air moves everywhere in that square.</p>
+<figure><img src="sketch.png" width="1350" height="900" alt="This sketch shows the street from the side, with wind U over the roofs and a swirl of air, or vortex, between the buildings. The star marks the swirl center, and the dashed line at 0.1 H, a tenth of the building height, marks 2 meters up."><figcaption>This sketch shows the street from the side, with wind U over the roofs and a swirl of air, or vortex, between the buildings. The star marks the swirl center, and the dashed line at 0.1 H, a tenth of the building height, marks 2 meters up.</figcaption></figure>
+</section>
+<section>
+<h2>What we want to find out</h2>
+<ul>
+<li>Where is the center of the swirl, in meters from the left building and above the ground?</li>
+<li>How fast does the air move sideways 2 meters above the street, as a share of the roof wind speed?</li>
+<li>Does the program reproduce two known answers, for air between two flat plates and for a box with a moving lid?</li>
+</ul>
+</section>
+<section>
+<h2>What the agent team does</h2>
+<figure><img src="team.png" width="1536" height="1024" alt="You talk to the orchestrator, and you approve the plan from the planner before the implementer starts. The reviewer and verifier send problems back to the implementer, and the report writer sends you the report."><figcaption>You talk to the <span class="course-term">orchestrator</span>, and you approve the <span class="course-term">plan</span> from the <span class="course-term">planner</span> before the <span class="course-term">implementer</span> starts. The <span class="course-term">reviewer</span> and <span class="course-term">verifier</span> send problems back to the <span class="course-term">implementer</span>, and the <span class="course-term">report writer</span> sends you the report.</figcaption></figure>
+<p>The <span class="course-term">implementer</span>, the <span class="course-term">agent</span> that writes code, writes the program and runs it on the street and both known cases. The <span class="course-term">reviewer</span> reads the code, and the <span class="course-term">verifier</span> runs it again to test the answers. The <span class="course-term">report writer</span> turns the tables and pictures into the report you get.</p>
+</section>
+<section>
+<h2>What the calculation leaves out</h2>
+<ul>
+<li>The program treats the air as calm and slow, so the swirl settles into one steady pattern.</li>
+<li>Real city wind is much faster and gusty, which engineers call turbulent.</li>
+<li>So our results show the shape of the swirl, not the real speeds in a street.</li>
+</ul>
+</section>
+<section>
+<h2>What a good answer looks like</h2>
+<ul>
+<li>When the <span class="course-term">verifier</span> runs the program again, it matches both known cases. Between the plates it matches the exact answer to twelve decimal places. In the lid box, its speeds stay within 5 percent of the lid speed from the values published in 1982.</li>
+<li>The program follows the method we set and solves new boxes without changes to its code. It cuts the box into small squares, moves the air forward in time steps, and corrects the pressure each step.</li>
+<li>Every question is answered by a picture or table that the program made, with labeled axes. The <span class="course-term">verifier</span> computes the swirl center and the speed at 2 meters on its own and gets the same values.</li>
+<li>The report tells you what to type to rebuild every result, and it names where the 1982 values come from. It says that real streets are turbulent and that AI did the work.</li>
+</ul>
+</section>
+<section>
+<h2>What the team found</h2>
+<p>The pictures and numbers come from our first sample run, and the run time and cost come from a second run. Our own calculations agreed with every answer in both runs, and the <span class="course-term">verifier</span> passed both with small flaws. In the first run, the program slightly changes the speed you set where air enters some other boxes. In the second, it slightly mismeasures how much the air changes from one time step to the next, but our corrected test still passes. Both runs lose a few numbers from rows of the summary table.</p>
+<ul>
+<li>The swirl center sits 12.5 meters from the left building and 15 meters above the ground. That is high in the street and a little toward the right building, where the wind blows.</li>
+<li>At 2 meters up, the fastest sideways air moves at 6.35 percent of the roof wind speed. It flows against the roof wind, from right to left, because the bottom of the swirl turns the other way.</li>
+<li>Both known cases passed. Between the plates, the program matched the exact answer to thirteen decimal places. In the lid box, its largest gap from the 1982 values was 0.87 percent of the lid speed, well inside the 5 percent limit.</li>
+</ul>
+<figure><img src="sample_1.png" width="1152" height="960" alt="Color shows air speed, from dark purple for still air to yellow for fast air, and white lines trace the air&#x27;s path. The red star is the swirl center, where psi, a number that traces the air&#x27;s path, is lowest."><figcaption>Color shows air speed, from dark purple for still air to yellow for fast air, and white lines trace the air&#x27;s path. The red star is the swirl center, where psi, a number that traces the air&#x27;s path, is lowest.</figcaption></figure>
+
+<figure><img src="sample_2.png" width="992" height="704" alt="This graph compares the program, the blue line, with the 1982 values, the dots, up the middle of the lid box. Here y/L is height as a share of the box, u/U_lid is speed as a share of the lid speed, and negative means backward."><figcaption>This graph compares the program, the blue line, with the 1982 values, the dots, up the middle of the lid box. Here y/L is height as a share of the box, u/U_lid is speed as a share of the lid speed, and negative means backward.</figcaption></figure>
+</section>
+  </div>
+  <section class="get on-paper" aria-label="Download">
+    <div class="wrap">
+      <p><b>Try it yourself.</b> The download holds the problem, the list of what a good answer must show and the <span class="course-term">agent team</span>. Unzip it, open the folder in <span class="course-term">OpenCode</span>, and type <span class="course-term">/do</span> to start a run.</p>
+      <a class="button" href="team.zip" download="cavity-city-airflow-team.zip">Download the team (ZIP)</a>
+    </div>
+  </section>
+  <aside class="run-details" aria-labelledby="run-details"><div class="wrap">
+<h2 id="run-details">Run details</h2>
+<dl><dt>Run time</dt><dd>about 40 minutes per run</dd><dt>Run cost</dt><dd>about $0.31 per run</dd><dt><span class="course-term">Model</span></dt><dd>GPT-6 Luna, high reasoning effort</dd></dl>
+<p>Measured times and costs come from our test runs; each run varies.</p>
+</div></aside>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="sponsor"><a href="https://ai.msu.edu/ai-ready">An AI-Ready Spartans project, Michigan State University</a></p>
+  </div>
+</footer>
+</body>
+</html>
