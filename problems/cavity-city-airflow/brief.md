@@ -30,6 +30,10 @@ The {{implementer}}, the {{agent}} that writes code, writes the program and runs
 - Real city wind is much faster and gusty, which engineers call turbulent.
 - So our results show the shape of the swirl, not the real speeds in a street.
 
+## What you need to run it
+
+To run this team, Python 3 and pandoc (a free program that makes the Word report) must be installed on your computer first.
+
 ## What a good answer looks like
 
 - When the {{verifier}} runs the program again, it matches both known cases. Between the plates it matches the exact answer to twelve decimal places. In the lid box, its speeds stay within 5 percent of the lid speed from the values published in 1982.

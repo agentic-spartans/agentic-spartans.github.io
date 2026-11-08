@@ -45,6 +45,10 @@ The {{orchestrator}} is the {{agent}} you talk to, and it runs the others in tur
 - Only exact words count, so a score of 0 does not mean you are unsuited for the job.
 - Required degrees or certificates appear only as cautions, and the team never judges whether you may work in a country.
 
+## What you need to run it
+
+To run this team, Python 3.12 and uv (a free tool that runs Python scripts) must be installed on your computer first. A run stops when it has spent $3.
+
 ## What a good answer looks like
 
 - The test ads get the scores we worked out, and removing an ability from a test ad lowers its score. A test ad that requires a certificate the CV lacks still gets a caution.
