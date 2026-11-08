@@ -40,19 +40,17 @@
   .videos .num { display: block; font-weight: 900; font-stretch: 62%; font-size: 2.5rem; line-height: 1; color: var(--green); }
   .videos h3 { margin: .35rem 0 .3rem; font-weight: 800; font-stretch: 88%; font-size: 1.35rem; line-height: 1.2; }
   .videos p { margin: 0; }
-  .videos-note { margin: -1rem 0 2rem; max-width: 46rem; color: #33443F; }
+  .start-here { margin: -1rem 0 2rem; max-width: 46rem; }
   .videos .soon { color: #4A5A55; font-style: italic; }
-  .notes { margin-top: 3rem; max-width: 46rem; }
-  .notes p { margin: 0 0 1rem; }
   #faq { margin-top: 3.5rem; }
   .faq { max-width: 46rem; border-bottom: 1px solid var(--line); }
   .faq details { border-top: 1px solid var(--line); }
   .faq summary { display: flex; align-items: center; min-height: 48px; padding-block: .5rem; font-weight: 800; font-stretch: 88%; font-size: 1.15rem; color: var(--green); cursor: pointer; }
   .faq summary::-webkit-details-marker { display: none; }
   .faq summary { list-style: none; }
-  .faq summary::after { content: "+"; margin-left: auto; padding-left: 1rem; font-weight: 900; }
-  .faq details[open] summary::after { content: "\2212"; }
-  .faq p { margin: 0 0 1rem; }
+  .faq summary::after { content: "+" / ""; margin-left: auto; padding-left: 1rem; font-weight: 900; }
+  .faq details[open] summary::after { content: "\2212" / ""; }
+  .faq p { margin: 0 0 1rem; overflow-wrap: anywhere; }
   .license { margin-top: 2rem; font-size: 1rem; color: #33443F; }
   footer { background: var(--green-deep); color: var(--mist); }
   footer .wrap { padding-block: 2rem; font-size: 1rem; }
