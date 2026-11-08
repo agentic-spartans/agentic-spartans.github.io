@@ -44,6 +44,16 @@
   .videos .soon { color: #4A5A55; font-style: italic; }
   .notes { margin-top: 3rem; max-width: 46rem; }
   .notes p { margin: 0 0 1rem; }
+  #faq { margin-top: 3.5rem; }
+  .faq { max-width: 46rem; border-bottom: 1px solid var(--line); }
+  .faq details { border-top: 1px solid var(--line); }
+  .faq summary { display: flex; align-items: center; min-height: 48px; padding-block: .5rem; font-weight: 800; font-stretch: 88%; font-size: 1.15rem; color: var(--green); cursor: pointer; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary { list-style: none; }
+  .faq summary::after { content: "+"; margin-left: auto; padding-left: 1rem; font-weight: 900; }
+  .faq details[open] summary::after { content: "\2212"; }
+  .faq p { margin: 0 0 1rem; }
+  .license { margin-top: 2rem; font-size: 1rem; color: #33443F; }
   footer { background: var(--green-deep); color: var(--mist); }
   footer .wrap { padding-block: 2rem; font-size: 1rem; }
   footer a { color: var(--paper); }
@@ -305,7 +315,7 @@
 
 <section id="A2" class="sec ref" aria-labelledby="A2-h" data-code="A2" data-prev="#menu" data-next="#A3" data-next-label="Next: A3. Show file extensions and hidden files">
 <h2 id="A2-h" tabindex="-1">A2. Get your key</h2>
-<div class="content"><p>Your key is an OpenRouter key: a secret code that lets OpenCode use the AI. If you do not have one yet, make one as the <a href="../setup/">setup page</a> shows.</p></div>
+<div class="content"><p>Your key is an OpenRouter key: a secret code that lets OpenCode use the AI. If you do not have one yet, the <a href="../#key">course page</a> says where to get one.</p></div>
 </section>
 
 <section id="A3" class="sec" aria-labelledby="A3-h" data-code="A3">
@@ -539,7 +549,7 @@
 <script>
 (function () {
   try {
-  var KEY = "windows-guide", REV = "0509ab69", root = document.documentElement, first = true, from = "";
+  var KEY = "windows-guide", REV = "44fbe53a", root = document.documentElement, first = true, from = "";
   function load() { try { var p = JSON.parse(localStorage.getItem(KEY)) || {}; return p.rev === REV ? p : { rev: REV }; } catch (e) { return { rev: REV }; } }
   function save(p) { try { localStorage.setItem(KEY, JSON.stringify(p)); } catch (e) {} }
   function $(id) { return document.getElementById(id); }
