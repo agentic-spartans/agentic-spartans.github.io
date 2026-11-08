@@ -126,6 +126,6 @@
     <p><a href="https://ai.msu.edu/ai-ready">An AI-Ready Spartans project, Michigan State University</a></p>
   </div>
 </footer>
-<script>(function () { var d = document.querySelector(".dock"); if (!d) return; function f() { document.documentElement.style.setProperty("--dock", d.offsetHeight + "px"); } f(); if (window.ResizeObserver) new ResizeObserver(f).observe(d); else window.addEventListener("resize", f); })();</script>
+<script>(function () { var d = document.querySelector(".dock"); if (!d) return; function f() { document.documentElement.style.setProperty("--dock", d.offsetHeight + "px"); } f(); if (document.fonts) document.fonts.ready.then(f); if (window.ResizeObserver) new ResizeObserver(f).observe(d); else window.addEventListener("resize", f); })();</script>
 </body>
 </html>
