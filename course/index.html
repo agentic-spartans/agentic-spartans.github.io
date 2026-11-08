@@ -56,8 +56,8 @@
   footer .wrap { padding-block: 2rem; font-size: 1rem; }
   footer a { color: var(--paper); }
 
-  html { scroll-padding-bottom: 7rem; }
-  body { padding-bottom: 6rem; }
+  html { scroll-padding-bottom: calc(var(--dock, 5.5rem) + 1rem); }
+  body { padding-bottom: calc(var(--dock, 5.5rem) + 1rem); }
   .skip { position: absolute; left: .5rem; top: -4rem; z-index: 20; padding: .6rem 1rem; background: var(--paper); color: var(--green); font-weight: 800; }
   .skip:focus { top: .5rem; }
   .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
@@ -123,5 +123,6 @@
     <p><a href="https://ai.msu.edu/ai-ready">An AI-Ready Spartans project, Michigan State University</a></p>
   </div>
 </footer>
+<script>(function () { var d = document.querySelector(".dock"); if (!d) return; function f() { document.documentElement.style.setProperty("--dock", d.offsetHeight + "px"); } f(); if (window.ResizeObserver) new ResizeObserver(f).observe(d); else window.addEventListener("resize", f); })();</script>
 </body>
 </html>

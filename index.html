@@ -104,8 +104,8 @@
   .dock p { margin: 0; font-weight: 800; font-stretch: 88%; font-size: 1.2rem; }
   .dock .go { border-color: #D4572F; padding: .9rem 1.4rem; }
   .dock .go:hover { border-color: #B4441F; }
-  body { padding-bottom: 6rem; }
-  html { scroll-padding-bottom: 7rem; }
+  body { padding-bottom: calc(var(--dock, 5.5rem) + 1rem); }
+  html { scroll-padding-bottom: calc(var(--dock, 5.5rem) + 1rem); }
   .hero .wrap { min-height: min(calc(100svh - 5.5rem), 54rem); }
   @media (max-width: 760px) { .dock p { display: none; } .dock .go { width: 100%; justify-content: center; } .hero .wrap { min-height: calc(100svh - 5.2rem); } }
 
@@ -182,6 +182,8 @@
     font-stretch: 75%;
     font-size: clamp(1.4rem, 2.6vw, 2rem);
     line-height: 1.05;
+    overflow-wrap: anywhere;
+    hyphens: auto;
   }
 
   .close { padding-block: clamp(48px, 8vw, 96px); }
@@ -322,5 +324,6 @@
     io.observe(team);
   })();
 </script>
+<script>(function () { var d = document.querySelector(".dock"); if (!d) return; function f() { document.documentElement.style.setProperty("--dock", d.offsetHeight + "px"); } f(); if (window.ResizeObserver) new ResizeObserver(f).observe(d); else window.addEventListener("resize", f); })();</script>
 </body>
 </html>
