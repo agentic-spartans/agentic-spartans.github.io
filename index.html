@@ -8,7 +8,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://agentic-spartans.github.io/">
 <meta property="og:title" content="Spartan Agentic AI Studio">
-<meta property="og:description" content="Direct a team of AI agents. A free, self-paced online course for MSU students in any major. Starts Nov 9, 2026.">
+<meta property="og:description" content="Direct a team of AI agents. A free, self-paced online course for MSU students in any major.">
 <meta name="theme-color" content="#18453B">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%2318453B'/%3E%3Crect x='3' y='3' width='10' height='3' fill='%23fff'/%3E%3Crect x='3' y='8' width='2' height='5' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -151,7 +151,7 @@
   .facts {
     margin: 0; padding: 0; list-style: none;
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     border-left: 1px solid #3a3a3a;
   }
   .facts li {
@@ -163,8 +163,6 @@
     font-size: clamp(1.4rem, 2.6vw, 2rem);
     line-height: 1.05;
   }
-  .facts li.date { background: var(--green); grid-column: span 2; }
-  .facts li.date b { display: block; font-weight: 900; font-stretch: 62%; font-size: clamp(2.6rem, 6vw, 4.5rem); line-height: .9; }
 
   .close { padding-block: clamp(48px, 8vw, 96px); }
   .close .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem; }
@@ -209,8 +207,6 @@
     .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); border-left: 0; }
     .facts li { padding-inline: var(--gutter); }
     .facts li:nth-child(2n) { border-right: 0; }
-    .facts li.date { border-right: 0; }
-    .facts li.date { grid-column: span 2; }
     .close .wrap { flex-direction: column; align-items: flex-start; }
     .instructors ul { grid-template-columns: 1fr; }
   }
@@ -228,7 +224,6 @@
     </div>
     <div class="hero-foot">
       <a class="enroll" href="https://apps.d2l.msu.edu/selfenroll/course/2752428">Enroll in D2L</a>
-      <span class="start">Starts Nov 9, 2026</span>
       <a class="start" href="course/">Videos and course files</a>
     </div>
   </div>
@@ -268,7 +263,6 @@
         <li>No coding needed</li>
         <li>Online, self&#8209;paced</li>
         <li>About 8 to 9 hours</li>
-        <li class="date">Starts <b>Nov 9, 2026</b></li>
       </ul>
     </div>
   </section>
