@@ -99,13 +99,14 @@
   .go:hover { background: #B4441F; }
   .go span { transition: transform .2s ease; }
   @media (prefers-reduced-motion: no-preference) { .go:hover span { transform: translateX(4px); } }
-  .dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; background: var(--paper); color: var(--green); border-top: 4px solid var(--green); padding-bottom: env(safe-area-inset-bottom); }
+  .dock { background: var(--paper); color: var(--green); border-top: 4px solid var(--green); padding-bottom: env(safe-area-inset-bottom); }
+  .js .dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; }
   .dock .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: .7rem; }
   .dock p { margin: 0; font-weight: 800; font-stretch: 88%; font-size: 1.2rem; }
   .dock .go { border-color: #D4572F; padding: .9rem 1.4rem; }
   .dock .go:hover { border-color: #B4441F; }
-  body { padding-bottom: calc(var(--dock, 5.5rem) + 1rem); }
-  html { scroll-padding-bottom: calc(var(--dock, 5.5rem) + 1rem); }
+  .js body { padding-bottom: calc(var(--dock, 5.5rem) + 1rem); }
+  html.js { scroll-padding-bottom: calc(var(--dock, 5.5rem) + 1rem); }
   .hero .wrap { min-height: min(calc(100svh - 5.5rem), 54rem); }
   @media (max-width: 760px) { .dock p { display: none; } .dock .go { width: 100%; justify-content: center; } .hero .wrap { min-height: calc(100svh - 5.2rem); } }
 

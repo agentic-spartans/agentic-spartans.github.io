@@ -50,18 +50,19 @@
   .faq summary { list-style: none; }
   .faq summary::after { content: "+" / ""; margin-left: auto; padding-left: 1rem; font-weight: 900; }
   .faq details[open] summary::after { content: "\2212" / ""; }
-  .faq p { margin: 0 0 1rem; }
+  .faq p { margin: 0 0 1rem; overflow-wrap: anywhere; }
   .license { margin-top: 2rem; font-size: 1rem; color: #33443F; }
   footer { background: var(--green-deep); color: var(--mist); }
   footer .wrap { padding-block: 2rem; font-size: 1rem; }
   footer a { color: var(--paper); }
 
-  html { scroll-padding-bottom: calc(var(--dock, 5.5rem) + 1rem); }
-  body { padding-bottom: calc(var(--dock, 5.5rem) + 1rem); }
+  html.js { scroll-padding-bottom: calc(var(--dock, 5.5rem) + 1rem); }
+  .js body { padding-bottom: calc(var(--dock, 5.5rem) + 1rem); }
   .skip { position: absolute; left: .5rem; top: -4rem; z-index: 20; padding: .6rem 1rem; background: var(--paper); color: var(--green); font-weight: 800; }
   .skip:focus { top: .5rem; }
   .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-  .dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; background: var(--paper); color: var(--green); border-top: 4px solid var(--green); padding-bottom: env(safe-area-inset-bottom); }
+  .dock { background: var(--paper); color: var(--green); border-top: 4px solid var(--green); padding-bottom: env(safe-area-inset-bottom); }
+  .js .dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; }
   .dock .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: .7rem; }
   .dock p { margin: 0; font-weight: 800; font-stretch: 88%; font-size: 1.15rem; }
   .coral { display: inline-flex; align-items: center; gap: .7rem; font-weight: 900; font-stretch: 88%; font-size: clamp(1.3rem, 2.1vw, 1.55rem); line-height: 1; padding: .9rem 1.3rem; background: #D4572F; color: #FFFFFF; border: 3px solid #D4572F; text-decoration: none; }
@@ -71,6 +72,7 @@
 </style>
 </head>
 <body>
+<script>document.documentElement.classList.add("js");</script>
 <a class="skip" href="#content">Skip to content</a>
 <nav class="dock" aria-label="Course files">
   <div class="wrap">
