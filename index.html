@@ -75,7 +75,7 @@
   .hero-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.75rem; }
   .start { font-weight: 700; font-stretch: 88%; font-size: 1.25rem; }
 
-  /* Enroll control: disabled button until ENROLL_URL is set */
+  /* Enroll control */
   .enroll {
     display: inline-block;
     font: inherit;
@@ -91,10 +91,8 @@
     cursor: pointer;
   }
   a.enroll:hover { background: var(--mist); border-color: var(--mist); }
-  .enroll:disabled { background: transparent; color: var(--paper); cursor: default; border-style: dashed; }
   .on-paper .enroll { border-color: var(--green); background: var(--green); color: var(--paper); }
   .on-paper a.enroll:hover { background: var(--green-deep); border-color: var(--green-deep); }
-  .on-paper .enroll:disabled { background: transparent; color: var(--green); }
 
   /* What you will do */
   .work { padding-block: clamp(56px, 10vw, 128px); }
@@ -229,8 +227,8 @@
       <p class="lede">A free, self-paced online course for MSU students in any major: build a small team of AI agents, check its work, and point it at a problem from your own field.</p>
     </div>
     <div class="hero-foot">
-      <button class="enroll" type="button" disabled>Enrollment opens soon</button>
-      <span class="start">Starts <s>Nov 1</s> Nov 9, 2026</span>
+      <a class="enroll" href="https://apps.d2l.msu.edu/selfenroll/course/2752428">Enroll in D2L</a>
+      <span class="start">Starts Nov 9, 2026</span>
       <a class="start" href="course/">Videos and course files</a>
     </div>
   </div>
@@ -270,7 +268,7 @@
         <li>No coding needed</li>
         <li>Online, self-paced</li>
         <li>About 12 hours</li>
-        <li class="date">Starts <s>Nov 1</s> <b>Nov 9, 2026</b></li>
+        <li class="date">Starts <b>Nov 9, 2026</b></li>
       </ul>
     </div>
   </section>
@@ -278,7 +276,7 @@
   <section class="close on-paper" aria-label="Enroll">
     <div class="wrap">
       <p>Any major. No coding needed.</p>
-      <button class="enroll" type="button" disabled>Enrollment opens soon</button>
+      <a class="enroll" href="https://apps.d2l.msu.edu/selfenroll/course/2752428">Enroll in D2L</a>
       <p class="ser">If you are an undergraduate student, the Studio will appear on your <a href="https://undergrad.msu.edu/programs/ser">Spartan Experience Record</a>.</p>
     </div>
   </section>
@@ -299,19 +297,6 @@
 </footer>
 
 <script>
-  // Set to the D2L enrollment link to turn every enroll button into "Enroll in D2L".
-  const ENROLL_URL = "https://apps.d2l.msu.edu/selfenroll/course/2752428";
-
-  if (ENROLL_URL) {
-    document.querySelectorAll("button.enroll").forEach(function (btn) {
-      const a = document.createElement("a");
-      a.className = "enroll";
-      a.href = ENROLL_URL;
-      a.textContent = "Enroll in D2L";
-      btn.replaceWith(a);
-    });
-  }
-
   // Assemble the team roster once it scrolls into view.
   (function () {
     const team = document.querySelector(".team");
