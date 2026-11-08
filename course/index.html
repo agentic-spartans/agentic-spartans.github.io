@@ -26,12 +26,16 @@
   .get { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; align-items: center; margin-top: 2rem; }
   .button { display: inline-block; font-weight: 800; font-stretch: 88%; font-size: 1.2rem; line-height: 1; padding: 1.05rem 1.5rem; border: 3px solid var(--paper); background: var(--paper); color: var(--green); text-decoration: none; }
   .button:hover { background: var(--mist); border-color: var(--mist); }
+  .button.ghost { background: transparent; color: var(--paper); border-color: rgba(255, 255, 255, .7); font-size: 1.05rem; padding: .85rem 1.2rem; }
+  .button.ghost:hover { background: var(--paper); color: var(--green); border-color: var(--paper); }
   .keep { margin: 1rem 0 0; max-width: 42rem; font-size: 1.0625rem; }
   main .wrap { padding-block: clamp(48px, 8vw, 96px); }
   h2 { margin: 0 0 2rem; font-weight: 900; font-stretch: 75%; font-size: clamp(2.2rem, 5.5vw, 3.75rem); line-height: 1; color: var(--green); }
   .videos { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr)); gap: 1.75rem 2.5rem; }
   .videos li { border-top: 4px solid var(--green); padding-top: .9rem; scroll-margin-top: 1rem; }
   .videos li:target { background: var(--mist); }
+  .videos li:nth-last-child(-n+2) { border-bottom: 4px solid var(--green); padding-bottom: 1.25rem; }
+  @media (max-width: 47rem) { .videos li:nth-last-child(2) { border-bottom: 0; padding-bottom: 0; } }
   .videos .num { display: block; font-weight: 900; font-stretch: 62%; font-size: 2.5rem; line-height: 1; color: var(--green); }
   .videos h3 { margin: .35rem 0 .3rem; font-weight: 800; font-stretch: 88%; font-size: 1.35rem; line-height: 1.2; }
   .videos p { margin: 0; }
@@ -52,12 +56,12 @@
     <p class="lede">Eight short videos on directing a team of AI agents, and the files to try it yourself. Anyone may watch them and reuse them. No coding needed.</p>
     <div class="get">
       <a class="button" href="https://github.com/agentic-spartans/agentic-spartans-course/releases/download/release/2026-11-09/AgentTeams_V3_2026-11-09.zip">Course files V3, updated Nov 9, 2026</a>
-      <a href="https://github.com/agentic-spartans/agentic-spartans-course/blob/main/setup.md">Setup guide</a>
-      <a href="windows/">Windows guide, step by step</a>
-      <a href="../problems/">Problems</a>
-      <a href="https://github.com/agentic-spartans/agentic-spartans-course">Slides and files on GitHub</a>
+      <a class="button ghost" href="https://github.com/agentic-spartans/agentic-spartans-course/blob/main/setup.md">Setup guide</a>
+      <a class="button ghost" href="windows/">Windows guide, step by step</a>
+      <a class="button ghost" href="../problems/">Example problems and teams</a>
+      <a class="button ghost" href="https://github.com/agentic-spartans/agentic-spartans-course">Slides and files on GitHub</a>
     </div>
-    <p class="keep">The download is the zip <b>AgentTeams_V3_2026-11-09</b>. Unzip it into your Studio folder (home &rsaquo; Studio), as the setup guide says. A newer download unzips beside this one, so your own work is never overwritten.</p>
+    <p class="keep">Unzip <b>AgentTeams_V3_2026-11-09</b> into your Studio folder; the setup guide shows how.</p>
   </div>
 </header>
 
@@ -77,8 +81,8 @@
 
     <div class="notes">
       <p><b>Where to start:</b> watch video 1, then follow the setup guide with video 2.</p>
-      <p><b>MSU students:</b> enroll in the D2L course from the <a href="../">home page</a>. It gives you a paid key, the quiz and help.</p>
-      <p><b>Everyone else:</b> you get every video, every slide and every team from the videos except the data-centers example (MSU course only), but not the paid key, the quiz or the help, which are MSU only. You pay OpenRouter, the service that runs the AI, directly: the runs in the course cost from a few cents to about $1.50 for the largest example, and the setup guide shows how to make a key with a $5 spending limit.</p>
+      <p><b>MSU students:</b> help for enrolled students is in the course's D2L page.</p>
+      <p><b>Everyone else:</b> every video, slide and team is here except the data-centers example. You pay OpenRouter, the service that runs the AI, directly: runs cost from a few cents to about $1.50 for the largest example, and the setup guide shows how to make a key with a spending limit.</p>
       <p>Videos, slides and text: CC BY 4.0. Team files: MIT.</p>
     </div>
   </div>
