@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Course | Spartan Agentic AI Studio</title>
-<meta name="description" content="The eight videos and the course files of the Spartan Agentic AI Studio. Free to watch and reuse.">
+<meta name="description" content="The videos and the course files of the Spartan Agentic AI Studio. Free to watch and reuse.">
 <meta name="theme-color" content="#18453B">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%2318453B'/%3E%3Crect x='3' y='3' width='10' height='3' fill='%23fff'/%3E%3Crect x='3' y='8' width='2' height='5' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,44 +40,61 @@
   .videos .num { display: block; font-weight: 900; font-stretch: 62%; font-size: 2.5rem; line-height: 1; color: var(--green); }
   .videos h3 { margin: .35rem 0 .3rem; font-weight: 800; font-stretch: 88%; font-size: 1.35rem; line-height: 1.2; }
   .videos p { margin: 0; }
-  .videos-note { margin: -1rem 0 2rem; max-width: 46rem; color: #33443F; }
+  .start-here { margin: -1rem 0 2rem; max-width: 46rem; }
   .videos .soon { color: #4A5A55; font-style: italic; }
-  .notes { margin-top: 3rem; max-width: 46rem; }
-  .notes p { margin: 0 0 1rem; }
   #faq { margin-top: 3.5rem; }
   .faq { max-width: 46rem; border-bottom: 1px solid var(--line); }
   .faq details { border-top: 1px solid var(--line); }
   .faq summary { display: flex; align-items: center; min-height: 48px; padding-block: .5rem; font-weight: 800; font-stretch: 88%; font-size: 1.15rem; color: var(--green); cursor: pointer; }
   .faq summary::-webkit-details-marker { display: none; }
   .faq summary { list-style: none; }
-  .faq summary::after { content: "+"; margin-left: auto; padding-left: 1rem; font-weight: 900; }
-  .faq details[open] summary::after { content: "\2212"; }
+  .faq summary::after { content: "+" / ""; margin-left: auto; padding-left: 1rem; font-weight: 900; }
+  .faq details[open] summary::after { content: "\2212" / ""; }
   .faq p { margin: 0 0 1rem; }
   .license { margin-top: 2rem; font-size: 1rem; color: #33443F; }
   footer { background: var(--green-deep); color: var(--mist); }
   footer .wrap { padding-block: 2rem; font-size: 1rem; }
   footer a { color: var(--paper); }
+
+  html { scroll-padding-bottom: 7rem; }
+  body { padding-bottom: 6rem; }
+  .skip { position: absolute; left: .5rem; top: -4rem; z-index: 20; padding: .6rem 1rem; background: var(--paper); color: var(--green); font-weight: 800; }
+  .skip:focus { top: .5rem; }
+  .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; background: var(--paper); color: var(--green); border-top: 4px solid var(--green); padding-bottom: env(safe-area-inset-bottom); }
+  .dock .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: .7rem; }
+  .dock p { margin: 0; font-weight: 800; font-stretch: 88%; font-size: 1.15rem; }
+  .coral { display: inline-flex; align-items: center; gap: .7rem; font-weight: 900; font-stretch: 88%; font-size: clamp(1.3rem, 2.1vw, 1.55rem); line-height: 1; padding: .9rem 1.3rem; background: #D4572F; color: #FFFFFF; border: 3px solid #D4572F; text-decoration: none; }
+  .coral:hover { background: #B4441F; border-color: #B4441F; }
+  .coral:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+  @media (max-width: 760px) { .dock p { display: none; } .coral { width: 100%; justify-content: center; } }
 </style>
 </head>
 <body>
+<a class="skip" href="#content">Skip to content</a>
+<nav class="dock" aria-label="Course files">
+  <div class="wrap">
+    <p>All the team files for every video, in one zip.</p>
+    <a class="coral" href="https://github.com/agentic-spartans/agentic-spartans-course/releases/download/release/2026-11-09/AgentTeams_V3_2026-11-09.zip">Download the course files<span class="vh"> (ZIP file)</span> <span aria-hidden="true">&darr;</span></a>
+  </div>
+</nav>
 <header class="hero">
   <div class="wrap">
     <p class="crumbs"><a href="../">Spartan Agentic AI Studio</a></p>
     <h1>The course</h1>
-    <p class="lede">Eight short videos on directing a team of AI agents, and the files to try it yourself. No coding needed.</p>
+    <p class="lede">Short videos on directing a team of AI agents, and the files to try it yourself. No coding needed.</p>
     <div class="get">
-      <a class="button" href="https://github.com/agentic-spartans/agentic-spartans-course/releases/download/release/2026-11-09/AgentTeams_V3_2026-11-09.zip">Download the course files</a>
       <a class="button ghost" href="windows/">Windows walkthrough</a>
       <a class="button ghost" href="../problems/">Example problems and teams</a>
     </div>
   </div>
 </header>
 
-<main>
+<main id="content" tabindex="-1">
   <div class="wrap">
     <h2>Videos</h2>
-    <p class="videos-note">The video shows a folder named AgentTeams; yours adds a version and a date. It is the same folder.</p>
-    <ol class="videos">
+    <p class="start-here"><b>Where to start:</b> watch video 1, then set up your computer with video 2.</p>
+    <ol class="videos" role="list">
       <li id="video-1"><span class="num">1</span><h3><a href="https://mediaspace.msu.edu/media/t/1_isvdn48i">Why a team</a></h3><p>A chatbot, an agent that uses tools, and a small team that checks its own work.</p></li>
       <li id="video-2"><span class="num">2</span><h3><a href="https://mediaspace.msu.edu/media/t/1_2mfxu8ig">Setup, first run and the team files</a></h3><p>Install OpenCode, add your key, run the simple team and look inside its files.</p></li>
       <li id="video-3"><span class="num">3</span><h3><a href="https://mediaspace.msu.edu/media/t/1_wbegbfar">The full team</a></h3><p>An orchestrator and five roles take one job from plan to report.</p></li>
@@ -88,17 +105,13 @@
       <li id="video-8"><span class="num">8</span><h3><a href="https://mediaspace.msu.edu/media/t/1_c2iyooon">Build your project</a></h3><p>A team built by hand on camera from the starter team for a new job, then run small and steered while it works.</p></li>
     </ol>
 
-    <div class="notes">
-      <p><b>Where to start:</b> watch video 1, then set up your computer with video 2.</p>
-    </div>
-
     <h2 id="faq">Questions</h2>
     <div class="faq">
-      <details id="slides"><summary>Where are the slides?</summary><p>In the slides folder of the <a href="https://github.com/agentic-spartans/agentic-spartans-course/tree/main/slides">course repository on GitHub</a>.</p></details>
+      <details id="slides"><summary>Where are the slides?</summary><p>One PDF per video, numbered like the videos, in the slides folder of the <a href="https://github.com/agentic-spartans/agentic-spartans-course/tree/main/slides">course repository on GitHub</a>.</p></details>
       <details id="computer"><summary>Which computer do I need?</summary><p>A Mac, Windows or Linux computer you may install programs on. OpenCode has no Chromebook or iPad version.</p></details>
-      <details id="folder"><summary>Where should my Studio folder go?</summary><p>In your home folder, the one with your name. Not in Desktop, Documents, Downloads, OneDrive or iCloud.</p></details>
+      <details id="folder"><summary>Where should my Studio folder go?</summary><p>In your home folder, the one with your name. Not in Desktop, Documents, Downloads, OneDrive or iCloud. Your course folder's name is longer than the AgentTeams in the videos; it is the same folder.</p></details>
       <details id="install"><summary>How do I install OpenCode on a Mac or on Linux?</summary><p>Download it from <a href="https://opencode.ai/download">opencode.ai/download</a>. On a Mac, drag OpenCode into Applications; if it will not open, click Open Anyway in System Settings › Privacy &amp; Security. On Linux, install the .deb or .rpm file.</p></details>
-      <details id="key"><summary>Where do I get a key, or help?</summary><p>MSU course students: in the course's D2L page. Anyone else: make a key on <a href="https://openrouter.ai">openrouter.ai</a> and give it a spending limit.</p></details>
+      <details id="key"><summary>Where do I get a key, or help?</summary><p>MSU course students: in the course's <a href="https://apps.d2l.msu.edu/selfenroll/course/2752428">D2L page</a>. Anyone else: make a key on <a href="https://openrouter.ai">openrouter.ai</a> and give it a spending limit.</p></details>
       <details id="port"><summary>OpenCode says the port is in use?</summary><p>Close its other windows and try again.</p></details>
     </div>
     <p class="license">Videos, slides and text: CC BY 4.0. Team files: MIT.</p>

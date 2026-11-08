@@ -94,6 +94,26 @@
   .on-paper .enroll { border-color: var(--green); background: var(--green); color: var(--paper); }
   .on-paper a.enroll:hover { background: var(--green-deep); border-color: var(--green-deep); }
 
+  /* Videos and course files: the one coral accent on the page */
+  .go { display: inline-flex; align-items: center; gap: .7rem; font-weight: 900; font-stretch: 88%; font-size: clamp(1.35rem, 2.2vw, 1.65rem); line-height: 1; padding: 1.15rem 1.6rem; background: #D4572F; color: #FFFFFF; border: 3px solid #FFFFFF; text-decoration: none; }
+  .go:hover { background: #B4441F; }
+  .go span { transition: transform .2s ease; }
+  @media (prefers-reduced-motion: no-preference) { .go:hover span { transform: translateX(4px); } }
+  .dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; background: var(--paper); color: var(--green); border-top: 4px solid var(--green); padding-bottom: env(safe-area-inset-bottom); }
+  .dock .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: .7rem; }
+  .dock p { margin: 0; font-weight: 800; font-stretch: 88%; font-size: 1.2rem; }
+  .dock .go { border-color: #D4572F; padding: .9rem 1.4rem; }
+  .dock .go:hover { border-color: #B4441F; }
+  body { padding-bottom: 6rem; }
+  html { scroll-padding-bottom: 7rem; }
+  .hero .wrap { min-height: min(calc(100svh - 5.5rem), 54rem); }
+  @media (max-width: 760px) { .dock p { display: none; } .dock .go { width: 100%; justify-content: center; } .hero .wrap { min-height: calc(100svh - 5.2rem); } }
+
+  .skip { position: absolute; left: .5rem; top: -4rem; z-index: 20; padding: .6rem 1rem; background: var(--paper); color: var(--green); font-weight: 800; }
+  .skip:focus { top: .5rem; }
+  .go:focus-visible, .coral:focus-visible { outline: 3px solid var(--mist); outline-offset: 3px; }
+  .topbar .go:focus-visible, .topbar .coral:focus-visible, .dock .go:focus-visible, .dock .coral:focus-visible { outline-color: var(--green); }
+
   /* What you will do */
   .work { padding-block: clamp(56px, 10vw, 128px); }
   h2 {
@@ -151,7 +171,7 @@
   .facts {
     margin: 0; padding: 0; list-style: none;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     border-left: 1px solid #3a3a3a;
   }
   .facts li {
@@ -201,6 +221,7 @@
   }
 
   @media (max-width: 760px) {
+    .hero .wrap { min-height: 0 !important; grid-template-rows: auto auto auto; gap: 3rem; }
     body { font-size: 1.0625rem; }
     .work-grid { grid-template-columns: 1fr; }
     .facts-band .wrap { padding-inline: 0; }
@@ -213,8 +234,15 @@
 </style>
 </head>
 <body>
+<a class="skip" href="#content">Skip to content</a>
 <script>document.documentElement.classList.add("js");</script>
 
+<nav class="dock" aria-label="Course">
+  <div class="wrap">
+    <p>Short videos and the team files. Open to anyone.</p>
+    <a class="go" href="course/">Videos and course files <span aria-hidden="true">&rarr;</span></a>
+  </div>
+</nav>
 <header class="hero">
   <div class="wrap">
     <p class="name">Spartan Agentic AI Studio</p>
@@ -224,19 +252,18 @@
     </div>
     <div class="hero-foot">
       <a class="enroll" href="https://apps.d2l.msu.edu/selfenroll/course/2752428">Enroll in D2L</a>
-      <a class="start" href="course/">Videos and course files</a>
     </div>
   </div>
 </header>
 
-<main>
+<main id="content" tabindex="-1">
   <section class="work" aria-labelledby="work-title">
     <div class="wrap">
       <h2 id="work-title">What you will do</h2>
       <div class="work-grid">
-        <div class="team pending" aria-label="Your agent team">
+        <div class="team pending" role="group" aria-label="Your agent team">
           <div class="director"><b>You</b><span>The director</span></div>
-          <ul class="roles">
+          <ul class="roles" role="list">
             <li>Planner</li>
             <li>Implementer</li>
             <li>Reviewer</li>
@@ -244,7 +271,7 @@
             <li>Report writer</li>
           </ul>
         </div>
-        <ul class="doing">
+        <ul class="doing" role="list">
           <li><b>Run a team of AI agents.</b> You set the goal and make the final call.</li>
           <li><b>Practice on real problems</b> from faculty across MSU's colleges.</li>
           <li><b>Write the rubric your verifier checks against</b>, so you decide what good work looks like.</li>
@@ -256,25 +283,15 @@
 
   <section class="facts-band" aria-label="Course facts">
     <div class="wrap">
-      <ul class="facts">
-        <li>Free</li>
-        <li>AI costs covered</li>
+      <ul class="facts" role="list">
         <li>Non-credit</li>
         <li>No coding needed</li>
-        <li>Online, self&#8209;paced</li>
         <li>About 8 to 9 hours</li>
+        <li>Undergraduates: on your <a href="https://undergrad.msu.edu/programs/ser">Spartan Experience Record</a></li>
       </ul>
     </div>
   </section>
 
-  <section class="close on-paper" aria-label="Enroll">
-    <div class="wrap">
-      <p>Any major. No coding needed.</p>
-      <a class="enroll" href="https://apps.d2l.msu.edu/selfenroll/course/2752428">Enroll in D2L</a>
-      <p class="ser">If you are an undergraduate student, the Studio will appear on your <a href="https://undergrad.msu.edu/programs/ser">Spartan Experience Record</a>.</p>
-      <p class="ser">Help for enrolled MSU students is in the course in D2L.</p>
-    </div>
-  </section>
 </main>
 
 <footer>
