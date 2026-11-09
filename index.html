@@ -8,7 +8,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://agentic-spartans.github.io/">
 <meta property="og:title" content="Spartan Agentic AI Studio">
-<meta property="og:description" content="Direct a team of AI agents. A free, self-paced online course for MSU students in any major.">
+<meta property="og:description" content="Direct a team of AI agents. A free, self-paced online course for MSU students in any major. Starts Nov 9, 2026.">
 <meta name="theme-color" content="#18453B">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%2318453B'/%3E%3Crect x='3' y='3' width='10' height='3' fill='%23fff'/%3E%3Crect x='3' y='8' width='2' height='5' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,7 +75,7 @@
   .hero-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.75rem; }
   .start { font-weight: 700; font-stretch: 88%; font-size: 1.25rem; }
 
-  /* Enroll control */
+  /* Enroll control: disabled button until ENROLL_URL is set */
   .enroll {
     display: inline-block;
     font: inherit;
@@ -91,29 +91,10 @@
     cursor: pointer;
   }
   a.enroll:hover { background: var(--mist); border-color: var(--mist); }
+  .enroll:disabled { background: transparent; color: var(--paper); cursor: default; border-style: dashed; }
   .on-paper .enroll { border-color: var(--green); background: var(--green); color: var(--paper); }
   .on-paper a.enroll:hover { background: var(--green-deep); border-color: var(--green-deep); }
-
-  /* Videos and course files: the one coral accent on the page */
-  .go { display: inline-flex; align-items: center; gap: .7rem; font-weight: 900; font-stretch: 88%; font-size: clamp(1.35rem, 2.2vw, 1.65rem); line-height: 1; padding: 1.15rem 1.6rem; background: #D4572F; color: #FFFFFF; border: 3px solid #FFFFFF; text-decoration: none; }
-  .go:hover { background: #B4441F; }
-  .go span { transition: transform .2s ease; }
-  @media (prefers-reduced-motion: no-preference) { .go:hover span { transform: translateX(4px); } }
-  .dock { background: var(--paper); color: var(--green); border-top: 4px solid var(--green); padding-bottom: env(safe-area-inset-bottom); }
-  .js .dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; }
-  .dock .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: .7rem; }
-  .dock p { margin: 0; font-weight: 800; font-stretch: 88%; font-size: 1.2rem; }
-  .dock .go { border-color: #D4572F; padding: .9rem 1.4rem; }
-  .dock .go:hover { border-color: #B4441F; }
-  .js body { padding-bottom: calc(var(--dock, 5.5rem) + 1rem); }
-  html.js { scroll-padding-bottom: calc(var(--dock, 5.5rem) + 1rem); }
-  .hero .wrap { min-height: min(calc(100svh - 5.5rem), 54rem); }
-  @media (max-width: 760px) { .dock p { display: none; } .dock .go { width: 100%; justify-content: center; } .hero .wrap { min-height: calc(100svh - 5.2rem); } }
-
-  .skip { position: absolute; left: .5rem; top: -4rem; z-index: 20; padding: .6rem 1rem; background: var(--paper); color: var(--green); font-weight: 800; }
-  .skip:focus { top: .5rem; }
-  .go:focus-visible, .coral:focus-visible { outline: 3px solid var(--mist); outline-offset: 3px; }
-  .topbar .go:focus-visible, .topbar .coral:focus-visible, .dock .go:focus-visible, .dock .coral:focus-visible { outline-color: var(--green); }
+  .on-paper .enroll:disabled { background: transparent; color: var(--green); }
 
   /* What you will do */
   .work { padding-block: clamp(56px, 10vw, 128px); }
@@ -183,9 +164,9 @@
     font-stretch: 75%;
     font-size: clamp(1.4rem, 2.6vw, 2rem);
     line-height: 1.05;
-    overflow-wrap: anywhere;
-    hyphens: auto;
   }
+  .facts li.date { background: var(--green); grid-column: span 2; }
+  .facts li.date b { display: block; font-weight: 900; font-stretch: 62%; font-size: clamp(2.6rem, 6vw, 4.5rem); line-height: .9; }
 
   .close { padding-block: clamp(48px, 8vw, 96px); }
   .close .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem; }
@@ -224,28 +205,22 @@
   }
 
   @media (max-width: 760px) {
-    .hero .wrap { min-height: 0 !important; grid-template-rows: auto auto auto; gap: 3rem; }
     body { font-size: 1.0625rem; }
     .work-grid { grid-template-columns: 1fr; }
     .facts-band .wrap { padding-inline: 0; }
     .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); border-left: 0; }
     .facts li { padding-inline: var(--gutter); }
     .facts li:nth-child(2n) { border-right: 0; }
+    .facts li.date { border-right: 0; }
+    .facts li.date { grid-column: span 2; }
     .close .wrap { flex-direction: column; align-items: flex-start; }
     .instructors ul { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
-<a class="skip" href="#content">Skip to content</a>
 <script>document.documentElement.classList.add("js");</script>
 
-<nav class="dock" aria-label="Course">
-  <div class="wrap">
-    <p>Short videos and the team files. Open to anyone.</p>
-    <a class="go" href="course/">Videos and course files <span aria-hidden="true">&rarr;</span></a>
-  </div>
-</nav>
 <header class="hero">
   <div class="wrap">
     <p class="name">Spartan Agentic AI Studio</p>
@@ -254,19 +229,20 @@
       <p class="lede">A free, self-paced online course for MSU students in any major: build a small team of AI agents, check its work, and point it at a problem from your own field.</p>
     </div>
     <div class="hero-foot">
-      <a class="enroll" href="https://apps.d2l.msu.edu/selfenroll/course/2752428">Enroll in D2L</a>
+      <button class="enroll" type="button" disabled>Enrollment opens soon</button>
+      <span class="start">Starts <s>Nov 1</s> Nov 9, 2026</span>
     </div>
   </div>
 </header>
 
-<main id="content" tabindex="-1">
+<main>
   <section class="work" aria-labelledby="work-title">
     <div class="wrap">
       <h2 id="work-title">What you will do</h2>
       <div class="work-grid">
-        <div class="team pending" role="group" aria-label="Your agent team">
+        <div class="team pending" aria-label="Your agent team">
           <div class="director"><b>You</b><span>The director</span></div>
-          <ul class="roles" role="list">
+          <ul class="roles">
             <li>Planner</li>
             <li>Implementer</li>
             <li>Reviewer</li>
@@ -274,7 +250,7 @@
             <li>Report writer</li>
           </ul>
         </div>
-        <ul class="doing" role="list">
+        <ul class="doing">
           <li><b>Run a team of AI agents.</b> You set the goal and make the final call.</li>
           <li><b>Practice on real problems</b> from faculty across MSU's colleges.</li>
           <li><b>Write the rubric your verifier checks against</b>, so you decide what good work looks like.</li>
@@ -286,15 +262,25 @@
 
   <section class="facts-band" aria-label="Course facts">
     <div class="wrap">
-      <ul class="facts" role="list">
+      <ul class="facts">
+        <li>Free</li>
+        <li>AI costs covered</li>
         <li>Non-credit</li>
         <li>No coding needed</li>
-        <li>About 10 hours</li>
-        <li>Undergraduates: on your <a href="https://undergrad.msu.edu/programs/ser">Spartan Experience Record</a></li>
+        <li>Online, self-paced</li>
+        <li>About 12 hours</li>
+        <li class="date">Starts <s>Nov 1</s> <b>Nov 9, 2026</b></li>
       </ul>
     </div>
   </section>
 
+  <section class="close on-paper" aria-label="Enroll">
+    <div class="wrap">
+      <p>Any major. No coding needed.</p>
+      <button class="enroll" type="button" disabled>Enrollment opens soon</button>
+      <p class="ser">If you are an undergraduate student, the Studio will appear on your <a href="https://undergrad.msu.edu/programs/ser">Spartan Experience Record</a>.</p>
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -312,6 +298,19 @@
 </footer>
 
 <script>
+  // Set to the D2L enrollment link to turn every enroll button into "Enroll in D2L".
+  const ENROLL_URL = "https://apps.d2l.msu.edu/selfenroll/course/2752428";
+
+  if (ENROLL_URL) {
+    document.querySelectorAll("button.enroll").forEach(function (btn) {
+      const a = document.createElement("a");
+      a.className = "enroll";
+      a.href = ENROLL_URL;
+      a.textContent = "Enroll in D2L";
+      btn.replaceWith(a);
+    });
+  }
+
   // Assemble the team roster once it scrolls into view.
   (function () {
     const team = document.querySelector(".team");
@@ -325,6 +324,5 @@
     io.observe(team);
   })();
 </script>
-<script>(function () { var d = document.querySelector(".dock"); if (!d) return; function f() { document.documentElement.style.setProperty("--dock", d.offsetHeight + "px"); } f(); if (document.fonts) document.fonts.ready.then(f); if (window.ResizeObserver) new ResizeObserver(f).observe(d); else window.addEventListener("resize", f); })();</script>
 </body>
 </html>
