@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How fast does water run when a dam breaks? | Spartan Agentic AI Studio</title>
+<meta name="description" content="When a dam breaks, towns downstream need to know how fast the flood arrives. Engineers test flood programs on a lab experiment: a square block of water is released onto a dry floor. We compute the experiment that the researchers Martin and Moyce filmed in 1952 and compare with their numbers.">
+<meta name="theme-color" content="#18453B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%2318453B'/%3E%3Crect x='3' y='3' width='10' height='3' fill='%23fff'/%3E%3Crect x='3' y='8' width='2' height='5' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <p class="crumbs"><a href="../../">Spartan Agentic AI Studio</a><span>/</span><a href="../">Problems</a></p>
+    <div class="hero-grid">
+      <div>
+        <h1>How fast does water run when a dam breaks?</h1>
+        <p class="meta">Contributed by Phanikumar Mantha, Civil and Environmental Engineering, Michigan State University.</p>
+        <div class="actions"><a class="button" href="team.zip" download="dam-break-team.zip">Download the team (ZIP)</a></div>
+      </div>
+      <img class="cartoon" src="cartoon.png" width="1536" height="1024" alt="A dam seen from straight above holds a lake on the left; below it a river runs right through a forested valley to a village and a bridge.">
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="brief wrap">
+<p class="course-note">Words with a dotted underline, like <span class="course-term">agent team</span>, are explained in the course.</p>
+<figure class="video"><video src="animation.mp4" width="800" height="360" autoplay muted loop playsinline controls preload="auto" aria-label="Yellow water falls and spreads right beneath purple air in our side-view calculation. x/a is distance along the floor and y/a is height, both in starting block widths; T is time in units of about 0.076 seconds."></video><figcaption>Yellow water falls and spreads right beneath purple air in our side-view calculation. x/a is distance along the floor and y/a is height, both in starting block widths; T is time in units of about 0.076 seconds.</figcaption></figure>
+<section>
+<h2>The problem</h2>
+<p>When a dam breaks, towns downstream need to know how fast the flood arrives. Engineers test flood programs on a lab experiment: a square block of water is released onto a dry floor. We compute the experiment that the researchers Martin and Moyce filmed in 1952 and compare with their numbers.</p>
+<figure><img src="sketch.png" width="1350" height="900" alt="A side view shows the starting block of water, side a, as a dashed outline and the spreading water in blue. The front is z from the back wall, the water at the wall is eta (η) high, and g is gravity."><figcaption>A side view shows the starting block of water, side a, as a dashed outline and the spreading water in blue. The front is z from the back wall, the water at the wall is eta (η) high, and g is gravity.</figcaption></figure>
+</section>
+<section>
+<h2>What we want to find out</h2>
+<ul>
+<li>How far does the front, the leading edge of the water, travel over time? Does it match the 1952 measurements for the small 2.25-inch block and the large 4.5-inch block?</li>
+<li>How fast does the water drop at the back wall, behind the block? Does it match the 1952 measurements?</li>
+<li>Does the answer change when the program cuts the water and air into more, smaller squares?</li>
+<li>Why does the shallow-water theory predict a faster front than Martin and Moyce measured? This simple theory treats the flood as a thin layer of water.</li>
+</ul>
+</section>
+<section>
+<h2>What the agent team does</h2>
+<figure><img src="team.png" width="1536" height="1024" alt="The planner writes a plan, you approve it, and the orchestrator hands out the work. The implementer writes the program, the reviewer and verifier send flaws back, and the report writer writes your report."><figcaption>The <span class="course-term">planner</span> writes a <span class="course-term">plan</span>, you approve it, and the <span class="course-term">orchestrator</span> hands out the work. The <span class="course-term">implementer</span> writes the program, the <span class="course-term">reviewer</span> and <span class="course-term">verifier</span> send flaws back, and the <span class="course-term">report writer</span> writes your report.</figcaption></figure>
+<p>In the sample <span class="course-term">run</span>, we approved the <span class="course-term">plan</span> by typing the word Approve. You get the program, result tables, two plots, a video of the collapse and a report on the four questions.</p>
+</section>
+<section>
+<h2>How we set up the calculation</h2>
+<p>Our program cuts the side view into small squares, 8, 12 or 16 across the block. Distances are in block widths, and one time unit is about 0.076 seconds for the small block. The program leaves out surface tension, the pull that holds a water surface together, and friction at the walls. It stops at 3.5 time units, so we skip the last two 1952 height measurements.</p>
+</section>
+<section>
+<h2>What you need to run it</h2>
+<p>To run this team, Python 3 and pandoc (a free program that makes the Word report) must be installed on your computer first.</p>
+</section>
+<section>
+<h2>What a good answer looks like</h2>
+<ul>
+<li>The calculated front and wall height match the 1952 measurements. The front must stay within half a block width or 20 percent of each measurement, whichever is larger. The wall height must stay within 5 percent of its starting height. A rerun must give the same numbers. The program must also move a strip of water across the squares without loss, much smearing or false ripples.</li>
+<li>Smaller squares and the larger block barely change the answer. Each step to smaller squares may shift the front by at most 0.3 block widths. It may shift the wall height by at most 0.02 of its starting height. The large block must match the small block even more closely.</li>
+<li>Still water half a block deep must stay still and keep all its water. Pressure is the water's push on each bit of area. The pressure difference between the bottom and top must match a hand calculation within 0.01 percent.</li>
+<li>The report answers every question with numbers from the result tables. It says where our front is ahead of the measured front and where it is behind. It names every simplification as a limit. It ends by naming the AI model that wrote it and saying the two 1952 tables were the only data.</li>
+</ul>
+</section>
+<section>
+<h2>What the team found</h2>
+<p>Our plots and video come from an earlier version of the team. The time and cost come from a later version. That version passed with one small flaw, which moves the front by at most 0.004 block widths. Its report also missed some sections. We have not fully tested the latest changes to the team's instructions.</p>
+<ul>
+<li>Our front stays within the allowed gap at all 29 measurements, 19 for the small block and 10 for the large. Our front is ahead of the measured front early on and behind it later. The worst gap is about 0.25 block widths for the small block and 0.76 for the large one. The allowed gaps are wide, so passing them does not prove the calculation is that accurate.</li>
+<li>Our wall height stays within 2.3 percent of the starting height at every measurement. The worst gap is at 3.08 time units. There the experiment measured 0.33 of the starting height, and we got about 0.35. The 1952 release time is not known exactly, so the measured points could shift a little in time.</li>
+<li>From 8 to 12 squares across, the front changed by up to about 0.23 block widths. From 12 to 16, it changed by up to about 0.09. Both are within the allowed 0.3, but the front has not fully stopped changing. The wall height changed by less than 0.5 percent of its starting height, so it has stopped changing. The large block matches the small one within about 0.0004 block widths in front and 0.0001 in wall height. In the still-water test, the pressure difference matched the hand value exactly.</li>
+<li>The shallow-water theory assumes the pressure depends only on the water's depth. That holds only when the water is not speeding up or slowing down. Under this theory, the front moves at 2 block widths per time unit. At the start, the top of the block falls faster and faster. The pressure there drops, so the push toward the front weakens. Our calculation shows this early fall. By 1 time unit, the wall height is down to about 0.84, while the theory still gives 1. Our front speed from 2 to 3 time units is about 1.28 block widths per time unit. That is below the theory's 2 and below the fastest measured speeds of 1.62 and 1.66. Our speed rises from about 1.10 to 1.24 to 1.28 as the squares get smaller. So coarse squares also slow the front, and we cannot say how much of the gap comes from the physics.</li>
+</ul>
+<figure><img src="sample_1.png" width="910" height="962" alt="The plot shows the front distance Z in block widths over time T, for our three grids and the large block. The crosses are the 1952 measurements, and the dotted shallow-water line runs far ahead of them."><figcaption>The plot shows the front distance Z in block widths over time T, for our three grids and the large block. The crosses are the 1952 measurements, and the dotted shallow-water line runs far ahead of them.</figcaption></figure>
+
+<figure><img src="sample_2.png" width="910" height="962" alt="The plot shows the wall height H, as a fraction of the starting height, over time T for our three grids. The crosses are the 1952 measurements, and the dotted shallow-water line stays at 1 until T = 1."><figcaption>The plot shows the wall height H, as a fraction of the starting height, over time T for our three grids. The crosses are the 1952 measurements, and the dotted shallow-water line stays at 1 until T = 1.</figcaption></figure>
+</section>
+  </div>
+  <section class="get on-paper" aria-label="Download">
+    <div class="wrap">
+      <p><b>Try it yourself.</b> The download holds the problem, the list of what a good answer must show and the <span class="course-term">agent team</span>. Unzip it, open the folder in <span class="course-term">OpenCode</span>, and type <span class="course-term">/do</span> to start a run.</p>
+      <a class="button" href="team.zip" download="dam-break-team.zip">Download the team (ZIP)</a>
+    </div>
+  </section>
+  <aside class="run-details" aria-labelledby="run-details"><div class="wrap">
+<h2 id="run-details">Our test run</h2>
+<dl><dt>Run time</dt><dd>about 25 minutes per run</dd><dt>Run cost</dt><dd>about $0.20 per run</dd><dt><span class="course-term">Model</span></dt><dd>GPT-6 Luna, high reasoning effort</dd></dl>
+<p>Measured times and costs come from our test runs; each run varies.</p>
+</div></aside>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="sponsor"><a href="https://ai.msu.edu/ai-ready">An AI-Ready Spartans project, Michigan State University</a></p>
+  </div>
+</footer>
+</body>
+</html>

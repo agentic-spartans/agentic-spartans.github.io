@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Measuring a voice from its recordings | Spartan Agentic AI Studio</title>
+<meta name="description" content="Speech-language pathologists treat voice problems, and they measure a voice from its recordings. A computer made four recordings for a made-up student: a held &quot;ah&quot;, a passage read aloud, and two &quot;ah&quot; glides, one up and one down. We want each recording&#x27;s pitch in hertz (Hz), the number of times the voice vibrates per second.">
+<meta name="theme-color" content="#18453B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%2318453B'/%3E%3Crect x='3' y='3' width='10' height='3' fill='%23fff'/%3E%3Crect x='3' y='8' width='2' height='5' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <p class="crumbs"><a href="../../">Spartan Agentic AI Studio</a><span>/</span><a href="../">Problems</a></p>
+    <div class="hero-grid">
+      <div>
+        <h1>Measuring a voice from its recordings</h1>
+        <p class="meta">Contributed by Maryam Naghibolhosseini, Communicative Sciences and Disorders, Michigan State University.</p>
+        <div class="actions"><a class="button" href="team.zip" download="voice-team.zip">Download the team (ZIP)</a></div>
+      </div>
+      <img class="cartoon" src="cartoon.png" width="1536" height="1024" alt="A table seen from above, with a microphone headset wired to an open laptop whose screen shows a wavy pitch line.">
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="brief wrap">
+<p class="course-note">Words with a dotted underline, like <span class="course-term">agent team</span>, are explained in the course.</p>
+<section>
+<h2>The problem</h2>
+<p>Speech-language pathologists treat voice problems, and they measure a voice from its recordings. A computer made four recordings for a made-up student: a held "ah", a passage read aloud, and two "ah" glides, one up and one down. We want each recording's pitch in hertz (Hz), the number of times the voice vibrates per second.</p>
+<figure><img src="sketch.png" width="1350" height="900" alt="The four recordings as pitch against time, where F0 up the side means pitch in Hz. The held &quot;ah&quot;, marked /a/, breaks briefly, and both glides climb past 600 Hz, the top of the usual range of Praat, a free pitch program."><figcaption>The four recordings as pitch against time, where F0 up the side means pitch in Hz. The held &quot;ah&quot;, marked /a/, breaks briefly, and both glides climb past 600 Hz, the top of the usual range of Praat, a free pitch program.</figcaption></figure>
+</section>
+<section>
+<h2>What we want to find out</h2>
+<ul>
+<li>How does the average pitch of the held "ah" compare with that of the reading?</li>
+<li>Which of these two recordings varies more in pitch, and what might explain the difference?</li>
+<li>What are the lowest and highest pitches in the reading, in each glide and in both glides, leaving out places Praat got wrong?</li>
+<li>Which published study, if any, measured a group of people with the student's age, sex, language and recording task?</li>
+<li>How do the student's measurements compare with that study's values, and what might explain any difference?</li>
+</ul>
+</section>
+<section>
+<h2>What the agent team does</h2>
+<figure><img src="team.png" width="1536" height="1024" alt="You talk to the orchestrator, and the planner writes a plan that you approve before the implementer starts. The reviewer and the verifier send mistakes back to the implementer, and the report writer brings the report to you."><figcaption>You talk to the <span class="course-term">orchestrator</span>, and the <span class="course-term">planner</span> writes a <span class="course-term">plan</span> that you approve before the <span class="course-term">implementer</span> starts. The <span class="course-term">reviewer</span> and the <span class="course-term">verifier</span> send mistakes back to the <span class="course-term">implementer</span>, and the <span class="course-term">report writer</span> brings the report to you.</figcaption></figure>
+<p>An <span class="course-term">agent team</span> is a set of <span class="course-term">agents</span>, AI models that each do one job. The <span class="course-term">implementer</span> runs Praat on each recording, leaves out wrong values, works out the pitch numbers and finds published values to compare. The <span class="course-term">verifier</span> measures the recordings again on its own and judges the work on the three points below.</p>
+</section>
+<section>
+<h2>What the recordings are and what a comparison can say</h2>
+<ul>
+<li>The made-up student is a 22-year-old woman who grew up speaking American English.</li>
+<li>The held "ah" was made at a steady 188.0 Hz, with one voice break, where the voice stops vibrating evenly.</li>
+<li>The reading rises and falls like speech but has no words.</li>
+<li>A comparison with one group is not a diagnosis, and a close value does not prove a healthy voice.</li>
+</ul>
+</section>
+<section>
+<h2>What you need to run it</h2>
+<p>To run this team, Python 3 and pandoc (a free program that makes the Word report) must be installed on your computer first.</p>
+</section>
+<section>
+<h2>What a good answer looks like</h2>
+<ul>
+<li>The measurements are right. The held "ah" comes within 1.0 Hz of the 188.0 Hz it was made at. Every number matches the <span class="course-term">verifier</span>'s own measurement within a small allowance. Each recording's picture shows any wrong values left out.</li>
+<li>Every comparison uses a real published group with the student's age, sex, language and task. Its numbers are copied exactly, and the distance from its average is worked out correctly. When no group matches, the answer says so.</li>
+<li>The team delivers its code, tables, a picture of each recording and a summary. The summary answers the five questions from the tables and marks its assumptions. It makes no diagnosis and says AI did the work on made-up recordings.</li>
+</ul>
+</section>
+<section>
+<h2>What the team found</h2>
+<p>The <span class="course-term">verifier</span> passed the answer on all three points. Two small reporting slips remain, and neither changes a measurement or a comparison. Some combined rows in the tables leave out settings shown in single rows. The <span class="course-term">verifier</span>'s notes count six measurements without a published match instead of four.</p>
+<ul>
+<li>The held "ah" averages 188.2 Hz over seconds 1 to 3, the stretch used for measuring. During its voice break, Praat reported 24 wrong values far above the voice, which the team left out. The reading averages 195.7 Hz, 7.6 Hz higher.</li>
+<li>The reading varies far more. The spread is how far values typically sit from their average. It is 35.1 Hz for the reading and 1.0 Hz for the held "ah". The team suggests, without testing it, that speech rising and falling causes this.</li>
+<li>The reading runs from 125.4 to 256.6 Hz. The glide up runs from 164.6 to 661.9 Hz, and the glide down from 149.3 to 641.3 Hz. So both glides together span 149.3 to 661.9 Hz. With its usual 600 Hz top, Praat reported the glide tops at about half their true pitch, so the team widened the range to 50 to 1200 Hz.</li>
+<li>One group matched, 104 women aged 18 to 27 who learned English as young children, from a 2016 thesis by Goy. Their held "ah" averages 251 Hz, and their reading averages 208 Hz with a spread of 45 Hz. The thesis has no glides, so the team compared the glide tops with the group's highest held note, 517 Hz. No group matched the reading's lowest and highest pitches or the glide bottoms.</li>
+<li>The group's held "ah" spread is 28 Hz, and 188.2 Hz sits 2.24 spreads below their average. Beyond 2 spreads counts as outside the group's usual range, and the other compared measurements fall within it. Differences may come from our short computer-made recording and from comparing glides with held notes.</li>
+</ul>
+<figure><img src="sample_1.png" width="750" height="585" alt="In our test of the team, the kept pitch of the held &quot;ah&quot; stays near 188 Hz, with seconds 1 to 3 shaded. The orange crosses far above are the 24 wrong values from the voice break, left out."><figcaption>In our test of the team, the kept pitch of the held &quot;ah&quot; stays near 188 Hz, with seconds 1 to 3 shaded. The orange crosses far above are the 24 wrong values from the voice break, left out.</figcaption></figure>
+
+<figure><img src="sample_2.png" width="750" height="585" alt="In our test of the team, the glide up rises from 164.6 to 661.9 Hz, and nothing was left out. The dashed line marks 600 Hz, the top of Praat&#x27;s usual range."><figcaption>In our test of the team, the glide up rises from 164.6 to 661.9 Hz, and nothing was left out. The dashed line marks 600 Hz, the top of Praat&#x27;s usual range.</figcaption></figure>
+</section>
+  </div>
+  <section class="get on-paper" aria-label="Download">
+    <div class="wrap">
+      <p><b>Try it yourself.</b> The download holds the problem, the list of what a good answer must show and the <span class="course-term">agent team</span>. Unzip it, open the folder in <span class="course-term">OpenCode</span>, and type <span class="course-term">/do</span> to start a run.</p>
+      <a class="button" href="team.zip" download="voice-team.zip">Download the team (ZIP)</a>
+    </div>
+  </section>
+  <aside class="run-details" aria-labelledby="run-details"><div class="wrap">
+<h2 id="run-details">Our test run</h2>
+<dl><dt>Run time</dt><dd>about 45 minutes per run</dd><dt>Run cost</dt><dd>about $0.22 per run</dd><dt><span class="course-term">Model</span></dt><dd>GPT-6 Luna, high reasoning effort</dd></dl>
+<p>Measured times and costs come from our test runs; each run varies.</p>
+</div></aside>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="sponsor"><a href="https://ai.msu.edu/ai-ready">An AI-Ready Spartans project, Michigan State University</a></p>
+  </div>
+</footer>
+</body>
+</html>

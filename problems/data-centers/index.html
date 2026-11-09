@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data centers in the news | Spartan Agentic AI Studio</title>
+<meta name="description" content="A data center is a large building full of computers that run websites and AI services. From October 2023 to September 2026, US news ran more articles about new ones than one person can read. We look for the subjects this news kept returning to, which a program finds as topics, or groups of words that often appear together.">
+<meta name="theme-color" content="#18453B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%2318453B'/%3E%3Crect x='3' y='3' width='10' height='3' fill='%23fff'/%3E%3Crect x='3' y='8' width='2' height='5' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <p class="crumbs"><a href="../../">Spartan Agentic AI Studio</a><span>/</span><a href="../">Problems</a></p>
+    <div class="hero-grid">
+      <div>
+        <h1>Data centers in the news</h1>
+        <p class="meta">Contributed by Titi Kou-Herrema, Digital Humanities, Michigan State University.</p>
+        <div class="actions"><a class="button" href="team.zip" download="data-centers-team.zip">Download the team (ZIP)</a></div>
+      </div>
+      <img class="cartoon" src="cartoon.png" width="1536" height="1024" alt="A data-center campus being built on farmland, seen from above: one finished hall with cooling fans on its roof beside the steel frame of a second hall, with cranes, trucks and workers.">
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="brief wrap">
+<p class="course-note">Words with a dotted underline, like <span class="course-term">agent team</span>, are explained in the course.</p>
+<section>
+<h2>The problem</h2>
+<p>A data center is a large building full of computers that run websites and AI services. From October 2023 to September 2026, US news ran more articles about new ones than one person can read. We look for the subjects this news kept returning to, which a program finds as topics, or groups of words that often appear together.</p>
+<figure><img src="sketch.png" width="1350" height="900" alt="The steps run from left to right, from monthly web searches to charts of each topic over time. The orange box tests the program on made-up news first, and the bottom arrow links each chart point to its articles."><figcaption>The steps run from left to right, from monthly web searches to charts of each topic over time. The orange box tests the program on made-up news first, and the bottom arrow links each chart point to its articles.</figcaption></figure>
+</section>
+<section>
+<h2>What we want to find out</h2>
+<ul>
+<li>Where did the articles come from, how were they searched, and how many outlets, such as newspapers and trade magazines, published them?</li>
+<li>How many topics does a rule set before the run choose, and how close were the other numbers it tried?</li>
+<li>What are the topics, and how do the four that changed most rise and fall over 12 quarters of three months?</li>
+<li>Which topics rise and fall together, or in opposite directions, and which articles does that point to for close reading?</li>
+<li>How can you follow a topic, a point on a chart or two linked topics back to their articles?</li>
+<li>How do we respect copyright, since every article still belongs to the outlet that published it?</li>
+</ul>
+</section>
+<section>
+<h2>What the agent team does</h2>
+<figure><img src="team.png" width="1536" height="1024" alt="The orchestrator at the top starts the planner, and you approve the plan before the searchers and then the implementer start. The reviewer and the verifier send work with problems back, and the report writer sends the report up to you."><figcaption>The <span class="course-term">orchestrator</span> at the top starts the <span class="course-term">planner</span>, and you approve the <span class="course-term">plan</span> before the <span class="course-term">searchers</span> and then the <span class="course-term">implementer</span> start. The <span class="course-term">reviewer</span> and the <span class="course-term">verifier</span> send work with problems back, and the <span class="course-term">report writer</span> sends the report up to you.</figcaption></figure>
+<p>In this <span class="course-term">agent team</span>, the four <span class="course-term">searchers</span> each run nine of the 36 monthly web searches, one search per month. The <span class="course-term">implementer</span> writes the programs that keep the US articles, find the topics and draw the charts. The <span class="course-term">reviewer</span> reads the work for problems, and the <span class="course-term">verifier</span> repeats it on its own before the <span class="course-term">report writer</span> writes your report.</p>
+</section>
+<section>
+<h2>What the topics can and cannot show</h2>
+<ul>
+<li>The search favors well-known outlets and recent articles, so our articles do not stand for all US news on data centers.</li>
+<li>The program reads only the short excerpt the search shows for each article, never the full article.</li>
+<li>A topic name, such as power and nuclear, is our own reading of its top words and articles.</li>
+<li>Twelve quarters are too few to prove that one topic causes another, so topics that move together are only clues.</li>
+</ul>
+</section>
+<section>
+<h2>What you need to run it</h2>
+<p>To run this team, Python 3 and pandoc (a free program that makes the Word report) must be installed on your computer first. A run stops when it has spent $3.</p>
+</section>
+<section>
+<h2>What a good answer looks like</h2>
+<ul>
+<li>The <span class="course-term">verifier</span> hides known topics in made-up news, and the programs must find them and how they rise and fall. Finding a known answer is why we trust the programs on real news.</li>
+<li>Running the programs again on the saved search results gives the same numbers, and the charts agree with them.</li>
+<li>There are at least 130 real articles from at least 40 outlets, and at most one link in twenty no longer opens. No article text is shared, because the articles belong to their publishers.</li>
+<li>Every file the team promised is there, and the report answers each question from the results. The report also says that the search favors well-known outlets and that AI produced it.</li>
+</ul>
+</section>
+<section>
+<h2>What the team found</h2>
+<p>Our sample run met all four points above, and a second, independent test at the Studio agreed.</p>
+<ul>
+<li>Each monthly search used only the words data centers, the month and year, and United States. The 36 searches returned 288 results. The team kept each US news or trade article once, which left 155 articles from 58 outlets.</li>
+<li>The rule tried every number of topics from three to twelve. It gave each number a score that is higher when each topic's top words share more articles. Six topics scored highest, at 0.0750, just ahead of ten topics at 0.0746, so the choice was close.</li>
+<li>We named the six topics from their top words and articles. They are Stargate and the AI build-out, property firms in Virginia, corporate campuses, construction of campuses, power and nuclear, and projects and local approvals. Stargate is a large AI data center project of the companies OpenAI and Oracle.</li>
+<li>Each article mixes several topics, and a topic's share is the part of an article it fills, averaged over a quarter. We chart the four topics whose share changed most from the first two quarters to the last two. Stargate rose from about 4 to 11 percent and peaked at 41 percent in July to September 2025. Over the same span, property firms fell from 19 to 13 percent.</li>
+<li>A correlation runs from minus 1 to 1 and says how closely two topics rise and fall together across quarters. Property firms and construction moved together, at 0.57, and construction and local approvals moved oppositely, at minus 0.61. Within single articles, all fifteen pairs of topics had slightly negative correlations. Shares that add up to 100 percent can cause this, so it does not show that the subjects avoid each other. The quarters where property firms and construction were both high or both low are worth reading closely.</li>
+<li>The tables list the articles behind each topic and each quarter, with their titles, outlets, dates and links. For example, the Stargate peak leads to seven articles, the first a CNBC news article of July 22, 2025. One of the 155 links now opens a page that was taken down.</li>
+<li>The excerpts the program read stayed in the run's private working folder. We share only tables, charts, titles and links, never article text.</li>
+</ul>
+<figure><img src="sample_1.png" width="750" height="1260" alt="Each line chart follows one topic&#x27;s average share of an article by quarter, since one article counts toward several topics; the dot at 41 in the top chart is the Stargate peak. Redrawn from the sample&#x27;s saved data for phone reading."><figcaption>Each line chart follows one topic&#x27;s average share of an article by quarter, since one article counts toward several topics; the dot at 41 in the top chart is the Stargate peak. Redrawn from the sample&#x27;s saved data for phone reading.</figcaption></figure>
+
+<figure><img src="sample_2.png" width="750" height="2070" alt="Each bar chart shows one topic&#x27;s ten top words, and a bar at 0.04 means the word makes up about 4 percent of that topic&#x27;s words. Redrawn from the sample&#x27;s saved data for phone reading."><figcaption>Each bar chart shows one topic&#x27;s ten top words, and a bar at 0.04 means the word makes up about 4 percent of that topic&#x27;s words. Redrawn from the sample&#x27;s saved data for phone reading.</figcaption></figure>
+</section>
+  </div>
+  <section class="get on-paper" aria-label="Download">
+    <div class="wrap">
+      <p><b>Try it yourself.</b> The download holds the problem, the list of what a good answer must show and the <span class="course-term">agent team</span>. Unzip it, open the folder in <span class="course-term">OpenCode</span>, and type <span class="course-term">/do</span> to start a run.</p>
+      <a class="button" href="team.zip" download="data-centers-team.zip">Download the team (ZIP)</a>
+    </div>
+  </section>
+  <aside class="run-details" aria-labelledby="run-details"><div class="wrap">
+<h2 id="run-details">Our test run</h2>
+<dl><dt>Run time</dt><dd>about 110 minutes per run</dd><dt>Run cost</dt><dd>about $1.51 per run</dd><dt><span class="course-term">Model</span></dt><dd>GPT-6 Luna, high reasoning effort</dd></dl>
+<p>Measured times and costs come from our test runs; each run varies.</p>
+</div></aside>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="sponsor"><a href="https://ai.msu.edu/ai-ready">An AI-Ready Spartans project, Michigan State University</a></p>
+  </div>
+</footer>
+</body>
+</html>
