@@ -17,6 +17,7 @@ from pathlib import Path
 
 EXT = {".html", ".css", ".png", ".jpg", ".jpeg", ".svg", ".mp4", ".zip", ".pdf", ".md", ".js", ".json"}
 LINK = re.compile(r"""(?:href|src)\s*=\s*["']([^"'#]+)""", re.I)
+SCRIPT = re.compile(r"<script\b[^>]*>.*?</script\s*>", re.I | re.S)  # inline code (e.g. bundled Plotly) is not links
 
 
 def fetch(url):
@@ -52,7 +53,7 @@ def check(base):
         elif rel.suffix == ".html":
             pages.append((rel, data.decode("utf-8", "replace")))
     for rel, text in pages:
-        for ref in LINK.findall(text):
+        for ref in LINK.findall(SCRIPT.sub("", text)):
             if re.match(r"^(mailto:|tel:|javascript:|data:)", ref):
                 continue
             target = urllib.parse.urljoin(url_of(base, rel), ref)
