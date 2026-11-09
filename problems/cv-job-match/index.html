@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Match a CV to job ads | Spartan Agentic AI Studio</title>
+<meta name="description" content="Finding a job or internship means reading hundreds of ads, so this agent team compares a CV with 1,362 saved US government job ads. A CV, or résumé, is a summary of your work, schooling and abilities, and the download includes a made-up one. Your own CV would go to the company that runs the AI model, so delete your phone number, address and other private details first.">
+<meta name="theme-color" content="#18453B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%2318453B'/%3E%3Crect x='3' y='3' width='10' height='3' fill='%23fff'/%3E%3Crect x='3' y='8' width='2' height='5' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <p class="crumbs"><a href="../../">Spartan Agentic AI Studio</a><span>/</span><a href="../">Problems</a></p>
+    <div class="hero-grid">
+      <div>
+        <h1>Match a CV to job ads</h1>
+        <p class="meta">Contributed by Spartan Agentic AI Studio, Michigan State University.</p>
+        <div class="actions"><a class="button" href="team.zip" download="cv-job-match-team.zip">Download the team (ZIP)</a></div>
+      </div>
+      <img class="cartoon" src="cartoon.png" width="1536" height="1024" alt="A desk seen from above with a CV on the left, a fan of printed job ads on the right and a pencil between them.">
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="brief wrap">
+<p class="course-note">Words with a dotted underline, like <span class="course-term">agent team</span>, are explained in the course.</p>
+<section>
+<h2>The problem</h2>
+<p>Finding a job or internship means reading hundreds of ads, so this <span class="course-term">agent team</span> compares a CV with 1,362 saved US government job ads. A CV, or résumé, is a summary of your work, schooling and abilities, and the download includes a made-up one. Your own CV would go to the company that runs the AI model, so delete your phone number, address and other private details first.</p>
+<figure><img src="sketch.png" width="1350" height="900" alt="The eleven boxes are the eleven steps below, in order, winding across four rows. The orange boxes in steps 7, 9 and 10 are where the team tests its own work."><figcaption>The eleven boxes are the eleven steps below, in order, winding across four rows. The orange boxes in steps 7, 9 and 10 are where the team tests its own work.</figcaption></figure>
+</section>
+<section>
+<h2>What we want to find out</h2>
+<ul>
+<li>Of the 1,362 real ads, how many fit everything you want, how many need a closer look, and how many are ruled out?</li>
+<li>Which five real jobs mention the most abilities from the CV, and what does each ask for that the CV does not show?</li>
+<li>Is there an honest CV change that would help for the job with the highest score?</li>
+<li>Do the made-up test ads give the answers we worked out ourselves, what do the practice ads show, and where can this matching go wrong?</li>
+</ul>
+</section>
+<section>
+<h2>What the agent team does</h2>
+<figure><img src="team.png" width="1536" height="1024" alt="You approve the planner&#x27;s plan before work starts. The reviewer and verifier send problems back to the implementer, and the report writer&#x27;s report comes to you."><figcaption>You approve the <span class="course-term">planner</span>&#x27;s <span class="course-term">plan</span> before work starts. The <span class="course-term">reviewer</span> and <span class="course-term">verifier</span> send problems back to the <span class="course-term">implementer</span>, and the <span class="course-term">report writer</span>&#x27;s report comes to you.</figcaption></figure>
+<p>The <span class="course-term">orchestrator</span> is the <span class="course-term">agent</span> you talk to, and it runs the others in turn. The <span class="course-term">implementer</span> writes a small computer program that does the sorting and counting. Besides the real ads, we made up eight practice ads and three test ads whose right answers we know.</p>
+<ul>
+<li>Step 1: The <span class="course-term">planner</span> writes the <span class="course-term">plan</span>, and nothing runs until you approve it.</li>
+<li>Step 2: The <span class="course-term">implementer</span> picks six to ten abilities that the CV names outright, each backed by a CV line. In our test, Adobe InDesign came from "Laid out 24-page print issues in Adobe InDesign each semester."</li>
+<li>Step 3: It sorts each ad by what you want, such as the job type, place and pay. An ad that breaks one of these is ruled out, and an ad that leaves one unanswered needs a closer look.</li>
+<li>Step 4: The program gives each ad that is not ruled out a percentage score. An ad that names two of eight chosen abilities scores 25 percent.</li>
+<li>Step 5: Ads with the same title and employer count as one job, and the five real jobs with the highest scores are listed.</li>
+<li>Step 6: For each of the five, the <span class="course-term">implementer</span> quotes what the ad requires and writes a caution, a note on what the CV does not show. For the job with the highest score, it suggests up to three CV edits. Each edit only rewords existing CV lines in the ad's words, and if none would help, it says why.</li>
+<li>Step 7: The program must score the three test ads exactly as we worked them out ourselves.</li>
+<li>Step 8: The <span class="course-term">implementer</span> writes a summary that answers the four questions and says that AI wrote it.</li>
+<li>Step 9: The <span class="course-term">reviewer</span> reads the whole result, and the <span class="course-term">implementer</span> fixes what it lists.</li>
+<li>Step 10: The <span class="course-term">verifier</span> redoes the sorting and counting on its own and sends any difference back.</li>
+<li>Step 11: The <span class="course-term">report writer</span> writes the report you read, including whether the <span class="course-term">verifier</span> passed the work.</li>
+</ul>
+</section>
+<section>
+<h2>How the match works and what it leaves out</h2>
+<ul>
+<li>The sorting looks at only four things: whether the ad is open, the job type and hours, the place, and the pay.</li>
+<li>It keeps ads from other fields, so the five jobs in our test are far from design.</li>
+<li>Only exact words count, so a score of 0 does not mean you are unsuited for the job.</li>
+<li>Required degrees or certificates appear only as cautions, and the team never judges whether you may work in a country.</li>
+</ul>
+</section>
+<section>
+<h2>What you need to run it</h2>
+<p>To run this team, Python 3.12 and uv (a free tool that runs Python scripts) must be installed on your computer first. A run stops when it has spent $3.</p>
+</section>
+<section>
+<h2>What a good answer looks like</h2>
+<ul>
+<li>The test ads get the scores we worked out, and removing an ability from a test ad lowers its score. A test ad that requires a certificate the CV lacks still gets a caution.</li>
+<li>Only ads that are not ruled out get a score, and every ability comes from an exact CV line. Only real ads make the list of five. If too few real jobs match, the summary says so and adds no made-up ones.</li>
+<li>Every quote is copied word for word, and a job is never called a fit just because its ad uses the CV's words. A CV edit only rewords what the CV already says.</li>
+<li>The summary answers all four questions and keeps real, practice and test ads in separate tables. It names where and when the ads were saved and says that AI did the work.</li>
+</ul>
+</section>
+<section>
+<h2>What the team found</h2>
+<p>Our test used a made-up studio art student who wants a summer design or photography internship in Michigan, Chicago or London.</p>
+<ul>
+<li>No real ad fits everything. 70 need a closer look, most often because the ad does not say whether it is an internship. The other 1,292 are ruled out.</li>
+<li>The team picked eight abilities, such as Adobe InDesign, Photoshop and Figma. None of the 70 ads mentions any of them, so all 70 score 0. The five listed are therefore not recommendations, and the CV shows none of what they ask for.</li>
+<li>The prevention specialist ad asks for a behavioral or social science degree. The information technology specialist ad asks for a computer science degree or IT experience. The logistics management specialist ad asks for top grades, graduate study or logistics experience. The social services assistant ad asks for a year of mental health support work. The radiologic technologist ad asks for X-ray training and certification.</li>
+<li>The team found no honest CV change for the prevention specialist job, the first of the five. Its ad asks for a behavioral or social science degree, so the team suggested nothing.</li>
+<li>Two test ads scored 100 percent, as we worked them out. The third was ruled out for its location and got no score. The test ad that requires a first aid certificate kept its caution despite its top score. Removing one ability dropped a test ad's score from 100 to 50 percent.</li>
+<li>The four made-up art and design internships among the practice ads scored 0 to 37.5 percent, and the four healthcare ones were ruled out. The real ads were saved on October 20, 2026, so some may have closed.</li>
+</ul>
+</section>
+  </div>
+  <section class="get on-paper" aria-label="Download">
+    <div class="wrap">
+      <p><b>Try it yourself.</b> The download holds the problem, the list of what a good answer must show and the <span class="course-term">agent team</span>. Unzip it, open the folder in <span class="course-term">OpenCode</span>, and type <span class="course-term">/do</span> to start a run.</p>
+      <a class="button" href="team.zip" download="cv-job-match-team.zip">Download the team (ZIP)</a>
+    </div>
+  </section>
+  <aside class="run-details" aria-labelledby="run-details"><div class="wrap">
+<h2 id="run-details">Our test run</h2>
+<dl><dt>Run time</dt><dd>about 45 minutes per run</dd><dt>Run cost</dt><dd>about $0.28 per run</dd><dt><span class="course-term">Model</span></dt><dd>GPT-6 Luna, high reasoning effort</dd></dl>
+<p>Measured times and costs come from our test runs; each run varies.</p>
+</div></aside>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="sponsor"><a href="https://ai.msu.edu/ai-ready">An AI-Ready Spartans project, Michigan State University</a></p>
+  </div>
+</footer>
+</body>
+</html>
