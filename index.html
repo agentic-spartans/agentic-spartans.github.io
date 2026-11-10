@@ -74,6 +74,8 @@
   }
   .hero-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.75rem; }
   .start { font-weight: 700; font-stretch: 88%; font-size: 1.25rem; }
+  .also { flex: 0 0 100%; margin-top: .75rem; padding-top: 1.25rem; border-top: 1px solid rgba(255, 255, 255, .35); }
+  .also p { margin: 0 0 1rem; max-width: 40rem; font-size: 1.15rem; line-height: 1.45; }
 
   /* Enroll control */
   .enroll {
@@ -255,7 +257,10 @@
     </div>
     <div class="hero-foot">
       <a class="enroll" href="https://apps.d2l.msu.edu/selfenroll/course/2752428">Enroll in D2L</a>
-      <a class="start" href="https://apps.d2l.msu.edu/selfenroll/course/2769339">Graduate students, postdocs, faculty and staff: the shorter version, about 3 hours</a>
+      <div class="also">
+        <p>Graduate students, postdocs, faculty and staff: a shorter version, about 3 hours, with no project to hand in.</p>
+        <a class="enroll" href="https://apps.d2l.msu.edu/selfenroll/course/2769339">Enroll in the shorter version</a>
+      </div>
     </div>
   </div>
 </header>
