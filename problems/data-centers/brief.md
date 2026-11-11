@@ -36,7 +36,7 @@ In this {{agent team}}, the four {{searchers}} each run nine of the 36 monthly w
 
 ## What you need to run it
 
-To run this team, Python 3 and pandoc (a free program that makes the Word report) must be installed on your computer first. A run stops when it has spent $3.
+A run stops when it has spent $3.
 
 ## What a good answer looks like
 
