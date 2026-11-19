@@ -75,6 +75,7 @@
   .hero-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.75rem; }
   .start { font-weight: 700; font-stretch: 88%; font-size: 1.25rem; }
   .also { flex: 0 0 100%; margin-top: .75rem; padding-top: 1.25rem; border-top: 1px solid rgba(255, 255, 255, .35); }
+  .also.first { margin-top: 0; padding-top: 0; border-top: 0; }
   .also p { margin: 0 0 1rem; max-width: 40rem; font-size: 1.15rem; line-height: 1.45; }
 
   /* Enroll control */
@@ -256,10 +257,13 @@
       <p class="lede">A free, self-paced online course for anyone at MSU: build a small team of AI agents, check its work, and point it at a problem from your own field. Running the teams needs a Mac, Windows or Linux computer; on a Chromebook, iPad or phone you can still <a href="course/">watch the videos</a>.</p>
     </div>
     <div class="hero-foot">
-      <a class="enroll" href="https://apps.d2l.msu.edu/selfenroll/course/2752428">Enroll in D2L</a>
+      <div class="also first">
+        <p>Students only: the full course, about 10 hours, with a project to hand in.</p>
+        <a class="enroll" href="https://apps.d2l.msu.edu/selfenroll/course/2752428" aria-label="Enroll in D2L, students only">Enroll in D2L</a>
+      </div>
       <div class="also">
         <p>Graduate students, postdocs, faculty and staff: a shorter version, about 3 hours, with no project to hand in.</p>
-        <a class="enroll" href="https://apps.d2l.msu.edu/selfenroll/course/2769339">Enroll in the shorter version</a>
+        <a class="enroll" href="https://apps.d2l.msu.edu/selfenroll/course/2769339" aria-label="Enroll in the shorter version, for graduate students, postdocs, faculty and staff">Enroll in the shorter version</a>
       </div>
     </div>
   </div>
