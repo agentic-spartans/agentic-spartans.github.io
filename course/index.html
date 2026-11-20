@@ -66,12 +66,11 @@
   .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   .dock { background: var(--paper); color: var(--green); border-top: 4px solid var(--green); padding-bottom: env(safe-area-inset-bottom); }
   .js .dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; }
-  .dock .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: .7rem; }
-  .dock p { margin: 0; font-weight: 800; font-stretch: 88%; font-size: 1.15rem; }
+  .dock .wrap { display: flex; align-items: center; justify-content: flex-end; padding-block: .7rem; }
   .coral { display: inline-flex; align-items: center; gap: .7rem; font-weight: 900; font-stretch: 88%; font-size: clamp(1.3rem, 2.1vw, 1.55rem); line-height: 1; padding: .9rem 1.3rem; background: #D4572F; color: #FFFFFF; border: 3px solid #D4572F; text-decoration: none; }
   .coral:hover { background: #B4441F; border-color: #B4441F; }
   .coral:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
-  @media (max-width: 760px) { .dock p { display: none; } .coral { width: 100%; justify-content: center; } }
+  @media (max-width: 760px) { .coral { width: 100%; justify-content: center; } }
 </style>
 <script defer src="https://stats-tsmlab.vercel.app/t.js" data-site="agentic-spartans"></script>
 </head>
@@ -80,7 +79,6 @@
 <a class="skip" href="#content">Skip to content</a>
 <nav class="dock" aria-label="Course files">
   <div class="wrap">
-    <p>All the team files for every video, in one zip.</p>
     <a class="coral" href="https://github.com/agentic-spartans/agentic-spartans-course/releases/download/release/2026-11-10-7/AgentTeams_V5_2026-11-10-7.zip">Download the course files<span class="vh"> (ZIP file)</span> <span aria-hidden="true">&darr;</span></a>
   </div>
 </nav>
